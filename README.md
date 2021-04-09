@@ -4,3 +4,6 @@
 > 카테고리를 분류해서 작성합니다.
 
 <hr/>
+
+### Algorithm
+* [Greedy](https://github.com/flip1945/TIL/tree/main/Algorithm/Greedy)
