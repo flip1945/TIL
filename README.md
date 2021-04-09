@@ -1,2 +1,5 @@
-# TIL
-Today I learned
+# Today I Learned(TIL)
+
+> 오늘 공부한 내용을 저장하는 장소입니다.
+> 카테고리를 분류해서 작성합니다.
+
