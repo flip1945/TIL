@@ -127,11 +127,9 @@ def quick_sort(array, start, end):
     
 quick_sort(array, 0, len(array) - 1)
 print(array)
-~~~
 
-더 간결한 방식으로 작성한 코드
+# 더 간결한 방식으로 작성한 코드
 
-~~~python
 array = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8]
 
 def quick_sort(array):
