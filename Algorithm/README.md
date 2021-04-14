@@ -259,7 +259,7 @@ for _ in range(m):
 
 def dijkstra(start):
     q = []
-    # 시작 노드까지의 최단 거리는 0이라는 의미로 최소 힙에 삽입
+    # 시작 노드까지의 최단 거리는 0이라는 의미로 최소 힙(우선 순위 큐)에 삽입
     heapq.heappush(q, (0, start))
     distance[start] = 0
     while q:
@@ -271,7 +271,7 @@ def dijkstra(start):
         # 현재 노드와 인접한 노드들을 확인
         for i in graph[now]:
             cost = dist + i[1]
-            # 현재 노드를 거쳐서, 다른 인접 노드로 이동하는 거리가 더 짧다면, 최단 거리를 갱신하고 우선 순위 큐에 
+            # 현재 노드를 거쳐서, 다른 인접 노드로 이동하는 거리가 더 짧다면, 최단 거리를 갱신하고 우선 순위 큐에 입력
             if cost < distance[i[0]]:
                 distance[i[0]] = cost
                 heapq.heappush(q, (cost, i[0]))
