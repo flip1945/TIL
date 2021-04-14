@@ -147,3 +147,70 @@ def quick_sort(array):
     
 print(quick_sort(array))
 ~~~
+
+#### 계수 정렬(Counting Sort) 알고리즘
+
+~~~python
+array = [7, 5, 9, 0, 3, 1, 6, 2, 9, 1, 4, 8, 0, 5]
+
+def counting_sort(array):
+    result = []
+    count = [0] * (max(array) + 1)
+
+    for i in range(len(array)):
+        # 각 데이터에 해당하는 인덱스의 값 증가
+        count[array[i]] += 1
+
+    for i in range(len(count)):
+        for j in range(count[i]):
+            result.append(i)
+    return result
+    
+print(counting_sort(array))
+~~~
+
+<hr/>
+
+### Binary Search
+
+#### Binary Search 알고리즘
+
+~~~python
+array = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+
+def binary_search(array, target, start, end):
+    if start > end:
+        return None
+    mid = (start + end) // 2
+    if array[mid] == target:
+        return mid
+    # 찾고자 하는 값이 더 작을 경우
+    elif array[mid] > target:
+        # 중간보다 왼쪽을 탐색
+        return binary_search(array, target, start, mid - 1)
+    # 찾고자 하는 값이 더 큰 경우
+    else:
+        # 중간보다 오른쪽을 탐색
+        return binary_search(array, target, mid + 1, end)
+
+print(binary_search(array, 7, 0, len(array) - 1))
+
+# 반복문으로 구현
+
+array = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+
+def binary_search(array, target, start, end):
+    while start <= end:
+        mid = (start + end) // 2
+        if array[mid] == target:
+            return mid
+        # 찾고자 하는 값이 더 작을 경우 end를 중간값 보다 1작게 설정
+        elif array[mid] > target:
+            end = mid - 1
+        # 찾고자 하는 값이 더 클 경우 start를 중간값보다 1크게 설정
+        else:
+            start = mid + 1
+    return None
+
+print(binary_search(array, 7, 0, len(array) - 1))
+~~~
