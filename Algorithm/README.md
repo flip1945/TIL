@@ -15,7 +15,7 @@ TDD 방식을 적용해 알고리즘 공부합니다.
 
 ## 예제 소스 코드
 
-### DFS & BFS
+### * DFS & BFS
 
 #### DFS 알고리즘
 
@@ -61,7 +61,7 @@ def bfs(graph, start, visited):
 
 <hr/>
 
-### Sort
+### * Sort
 
 #### 선택 정렬(Selection Sort) 알고리즘
 
@@ -95,174 +95,6 @@ for i in range(i, len(array)):
     
 print(array)
 ~~~
-
-ph = [[]] # 생략
-
-58
-
-    visited = [False] * 9
-
-59
-
-    bfs(graph, 1, visited)
-
-60
-
-~~~
-
-61
-
-
-
-62
-
-<hr/>
-
-63
-
-
-
-64
-
-### Sort
-
-65
-
-
-
-66
-
-#### 선택 정렬(Selection Sort) 알고리즘
-
-67
-
-
-
-68
-
-~~~python
-
-69
-
-array = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8]
-
-70
-
-
-
-71
-
-for i in range(len(array) - 1):
-
-72
-
-    min_index = i
-
-73
-
-    for j in range(i + 1, len(array)):
-
-74
-
-        if array[min_index] > array[j]:
-
-75
-
-            min_index = j
-
-76
-
-    # swap
-
-77
-
-    array[i], array[min_index] = array[min_index], array[i]
-
-78
-
-    
-
-79
-
-print(array)
-
-80
-
-~~~
-
-81
-
-
-
-82
-
-#### 삽입 정렬(Insertion Sort) 알고리즘
-
-83
-
-
-
-84
-
-~~~python
-
-85
-
-array = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8]
-
-86
-
-
-
-87
-
-for i in range(i, len(array)):
-
-88
-
-    for j in range(i, 0, -1):
-
-89
-
-        # 현재 삽입해야 하는 원소가 삽입된 원소보다 작다면 
-
-90
-
-        if array[j] < array[j-1]:
-
-91
-
-            # 왼쪽으로 한 칸 이동
-
-92
-
-            array[j], array[j-1] = array[j-1], array[j]
-
-93
-
-        else:
-
-94
-
-            braek
-
-95
-
-    
-
-96
-
-print(array)
-
-97
-
-~~~
-
-98
-
-
-
-99
 
 #### 퀵 정렬(Quick Sort) 알고리즘
 
