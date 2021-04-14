@@ -214,3 +214,21 @@ def binary_search(array, target, start, end):
 
 print(binary_search(array, 7, 0, len(array) - 1))
 ~~~
+
+#### Bisect 라이브러리 사용법
+
+~~~python
+from bisect import bisect_left, bisect_right
+
+array = [1, 2, 3, 3, 3, 3, 4, 4, 8, 9]
+
+def count_by_range(array, left_value, right_value):
+    right_index = bisect_right(array, right_value)
+    left_index = bisect_left(array, left_value)
+    return right_index - left_index
+
+# 값이 4인 데이터의 개수 출력
+print(count_by_range(array, 4, 4))
+# 값이 -1 이상, 3 이하의 데이터 개수 출력
+print(count_by_range(array, -1, 3))
+~~~
