@@ -271,7 +271,8 @@ def dijkstra(start):
         # 현재 노드와 인접한 노드들을 확인
         for i in graph[now]:
             cost = dist + i[1]
-            # 현재 노드를 거쳐서, 다른 인접 노드로 이동하는 거리가 더 짧다면, 최단 거리를 갱신하고 우선 순위 큐에 입력
+            # 현재 노드를 거쳐서, 다른 인접 노드로 이동하는 거리가 더 짧다면
+            # 최단 거리를 갱신하고 우선 순위 큐에 입력
             if cost < distance[i[0]]:
                 distance[i[0]] = cost
                 heapq.heappush(q, (cost, i[0]))
