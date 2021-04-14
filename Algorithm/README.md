@@ -56,3 +56,36 @@ def bfs(graph, start, visited):
     visited = [False] * 9
     bfs(graph, 1, visited)
 ~~~
+
+### 선택 정렬(Selection Sort) 알고리즘
+
+~~~python
+array = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8]
+
+for i in range(len(array) - 1):
+    min_index = i
+    for j in range(i + 1, len(array)):
+        if array[min_index] > array[j]:
+            min_index = j
+    # swap
+    array[i], array[min_index] = array[min_index], array[i]
+    
+print(array)
+~~~
+
+### 삽입 정렬(Insertion Sort) 알고리즘
+
+~~~python
+array = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8]
+
+for i in range(i, len(array)):
+    for j in range(i, 0, -1):
+        # 현재 삽입해야 하는 원소가 삽입된 원소보다 작다면 
+        if array[j] < array[j-1]:
+            # 왼쪽으로 한 칸 이동
+            array[j], array[j-1] = array[j-1], array[j]
+        else:
+            braek
+    
+print(array)
+~~~
