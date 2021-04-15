@@ -1,4 +1,6 @@
 ~~~python
+    print(1)
+~~~
 # 입력 조건 : n = 전체 학생 수, lost = 도난 당한 학생들의 리스트 (중복 X), reserve = 여벌을 가져온 학생들의 리스트
 # 출력 조건 : 수업을 들을 수 있는 총 학생 수
 
@@ -36,5 +38,3 @@ def reserve_chk(students, reserve):
 
 if __name__ == "__main__":
     reserve_chk([1, 1, 0, 1, 0, 1], [1, 3, 5])
-
-~~~
