@@ -8,8 +8,7 @@ def solution(string):
         else:
             if s == ")":
                 return "NO"
-            else:
-                stack.append(s)
+            stack.append(s)
     return is_empty(stack)
 
 
