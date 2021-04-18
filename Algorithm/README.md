@@ -29,9 +29,9 @@ def dfs(graph, v, visited):
         if not visited[i]:
            dfs(graph, i, visited)
            
-    graph = [[]] # 생략
-    visited = [False] * 9
-    dfs(graph, 1, visited)
+graph = [[]] # 생략
+visited = [False] * 9
+dfs(graph, 1, visited)
 ~~~
 
 #### BFS 알고리즘
@@ -54,9 +54,9 @@ def bfs(graph, start, visited):
                 queue.append(i)
                 visited[i] = True
            
-    graph = [[]] # 생략
-    visited = [False] * 9
-    bfs(graph, 1, visited)
+graph = [[]] # 생략
+visited = [False] * 9
+bfs(graph, 1, visited)
 ~~~
 
 <hr/>
