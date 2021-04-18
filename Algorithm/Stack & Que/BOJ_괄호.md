@@ -9,6 +9,7 @@ def solution(string):
             if s == ")":
                 return "NO"
             stack.append(s)
+            
     return is_empty(stack)
 
 
