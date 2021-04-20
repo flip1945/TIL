@@ -86,3 +86,41 @@ if __name__ == "__main__":
     a, b = map(int, input().split())
     print(solution(a, b))
 ~~~
+
+##### 베스트 케이스
+
+모든 위치에 도달하는 정보를 저장하는 리스트를 만드는 방법을 적용한 풀이입니다.
+
+~~~python
+from collections import deque
+N,K=map(int,input().split())
+Max=10**5
+D=[-1]*(Max+1)
+D[N]=0
+q=deque()
+q.append(N)
+while q:
+    x=q.popleft()
+    for nx in [x-1,x+1,2*x]:
+        if 0<=nx<=Max and D[nx]==-1:
+            q.append(nx)
+            D[nx]=D[x]+1
+print(D[K])
+~~~
+
+분할 정복과 재귀 호출을 통한 풀이입니다.
+
+~~~python
+def solution(n,k):
+    if n>=k:
+        return n-k
+    elif k == 1:
+        return 1
+    elif k%2:
+        return 1+min(solution(n,k-1),solution(n,k+1))
+    else:
+        return min(k-n, 1+solution(n,k//2))
+    
+n, k = map(int,input().split())
+print(solution(n,k))
+~~~
