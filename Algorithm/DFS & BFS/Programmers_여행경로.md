@@ -134,7 +134,7 @@ if __name__ == "__main__":
 
 1. 스택을 이용한 풀이
 
-출처 : https://copy-driven-dev.tistory.com/entry/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-ProgrammersPython-%EC%97%AC%ED%96%89%EA%B2%BD%EB%A1%9C
+   출처 : https://copy-driven-dev.tistory.com/entry/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-ProgrammersPython-%EC%97%AC%ED%96%89%EA%B2%BD%EB%A1%9C
 
 ~~~python
 def solution(tickets):
@@ -167,7 +167,7 @@ def solution(tickets):
 
 2. 재귀를 이용한 풀이 
 
-출처 : https://lsh424.tistory.com/58
+   출처 : https://lsh424.tistory.com/58
 
 ~~~python
 import collections, copy
@@ -205,7 +205,7 @@ def solution(tickets):
 
 3. DFS, 백트래킹을 이용한 풀이
 
-출처 : https://inspirit941.tistory.com/164
+   출처 : https://inspirit941.tistory.com/164
 
 ~~~python
 from collections import defaultdict
