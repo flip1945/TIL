@@ -9,3 +9,5 @@
 * [Greedy](https://github.com/flip1945/TIL/tree/main/Algorithm/Greedy)
 * [Stack & Queue](https://github.com/flip1945/TIL/tree/main/Algorithm/Stack%20%26%20Que)
 * [DFS & BFS](https://github.com/flip1945/TIL/tree/main/Algorithm/DFS%20%26%20BFS)
+* [Brute Force](https://github.com/flip1945/TIL/tree/main/Algorithm/Brute%20Force)
+* [String](https://github.com/flip1945/TIL/tree/main/Algorithm/String)
