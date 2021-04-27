@@ -1,6 +1,8 @@
-# [1차] 다트 게임(Level 1)
+# 실패율(Level 1)
 
 ### 문제 설명
+
+![ALT text](https://grepp-programmers.s3.amazonaws.com/files/production/bde471d8ac/48ddf1cc-c4ea-499d-b431-9727ee799191.png)
 
 슈퍼 게임 개발자 오렐리는 큰 고민에 빠졌다. 그녀가 만든 프랜즈 오천성이 대성공을 거뒀지만, 요즘 신규 사용자의 수가 급감한 것이다. 원인은 신규 사용자와 기존 사용자 사이에 스테이지 차이가 너무 큰 것이 문제였다.
 
@@ -70,47 +72,49 @@
 
 ### 문제풀이
 
-문자열을 다루는 문제가 익숙하지 않아서 풀게된 문제입니다.   
+구현 문제입니다.   
 
-이 문제는 카카오 코딩 테스트 문제인데, 최대한 빠른 시간 안에 풀어야 다음 문제를 풀 시간이 주어집니다.   
+아직도 문제를 빨리 푸는 것이 익숙하지 않다고 느껴졌습니다.   
 
-저는 if문을 사용해 각 문자를 처리했는데, if문을 써야 하는지 판단하는데 시간을 많이 썼습니다.  
+전체 로직은 금방 생각 했는데, 정렬 기준을 정하는 데에서 시간을 많이 소모했습니다.   
 
-시간 제한이 있는 문제이다 보니 바로 if문만 써서라도 해결하는 것이 좋다고 판단됩니다.   
+실패율을 기준으로 내림차순 정렬을 한 다음에 같은 실패율이 있을 경우에는 스테이지가 작은 순으로 오름차순 정렬을 해야 합니다.   
 
-정규표현식을 쓰는 방법도 있을 것 같았는데, 역시 정규표현식을 사용해 잘 해결하신 분들이 많았습니다.   
+저는 이를 해결하기 위해서 실패율과 스테이지를 묶어서 튜플로 만들었습니다.   
 
-정규표현식을 공부해서 다음 문제에 써봐야 겠습니다.   
+1. 먼저, 실패율과 스테이지를 하나로 묶어서 튜플로 만듭니다.
+
+2. 그리고, 실패율을 기준으로 내림차순 정렬을 합니다.
+
+3. 실패율을 기준으로 내림차순 정렬이 되면, 같은 실패율끼리는 스테이지 순으로 오름차순 정렬이 되게끔 스테이지에 (-)부호를 붙입니다.
+
+4. 정렬된 스테이지에 다시 (-)부호를 붙여서 원래의 숫자로 바꾸고 출력합니다.
+
+정렬 기준을 정하는 데, 어려움을 느껴서 비슷한 유형의 문제를 많이 풀어봐야 겠습니다.
+
+그리고 문제 풀이 사이사이에 TDD를 하는 것처럼 Test를 해보는 것이 좋다고 생각됐습니다.
+
 
 ---
 
 #### 나의 풀이
 
 ~~~python
-def solution(dartResult):
-    answer = []
-    s = ""
-    for d in dartResult:
-        if d == "S":
-            answer.append(int(s))
-            s = ""
-        elif d == "D":
-            answer.append(int(s)**2)
-            s = ""
-        elif d == "T":
-            answer.append(int(s)**3)
-            s = ""
-        elif d == "*":
-            if len(answer) > 1:
-                answer[-1] = answer[-1] * 2
-                answer[-2] = answer[-2] * 2
-            else:
-                answer[-1] = answer[-1] * 2
-        elif d == "#":
-            answer[-1] = answer[-1] * (-1)
-        else:
-            s += d
-    return sum(answer)
+from bisect import *
+
+def bi(stages, r, l):
+    return bisect_right(stages, r) - bisect_left(stages, l)
+
+def solution(N, stages):
+    fail = []
+    stages.sort()
+    for i in range(1, N + 1):
+        # 실패율과 스테이지를 튜플로 묶음, 스테이지가 작은 순으로 출력되도록 -부호를 붙임
+        fail.append((bi(stages, i, i) / bi(stages, N + 1, i), -i) if bi(stages, N + 1, i) != 0 else (0, -i))
+    # 내림차순 정렬을 실행, 같은 실패율인 것은 스테이지가 작은 것이 더 앞으로 정렬됨
+    fail.sort(reverse=True)
+    # 정렬된 fail의 앞부분부터 출력, 스테이지를 원래대로 출력하기 위해 다시 -부호를 붙임
+    return [-f[1] for f in fail]
 ~~~
 
 ---
@@ -118,18 +122,14 @@ def solution(dartResult):
 #### 다른 사람의 풀이
 
 ~~~python
-import re
-
-def solution(dartResult):
-    bonus = {'S' : 1, 'D' : 2, 'T' : 3}
-    option = {'' : 1, '*' : 2, '#' : -1}
-    p = re.compile('(\d+)([SDT])([*#]?)')
-    dart = p.findall(dartResult)
-    for i in range(len(dart)):
-        if dart[i][2] == '*' and i > 0:
-            dart[i-1] *= 2
-        dart[i] = int(dart[i][0]) ** bonus[dart[i][1]] * option[dart[i][2]]
-
-    answer = sum(dart)
+def solution(N, stages):
+    fail = {}
+    for i in range(1,N+1):
+        try:
+            fail_ = len([a for a in stages if a==i])/len([a for a in stages if a>=i])
+        except:
+            fail_ = 0
+        fail[i]=fail_
+    answer = sorted(fail, key=fail.get, reverse=True)
     return answer
 ~~~
