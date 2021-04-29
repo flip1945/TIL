@@ -105,12 +105,15 @@ def solution(numbers, hand):
     r = 10
     
     for num in numbers:
+        # 눌러야 할 번호가 1, 4, 7인 경우
         if num in [1, 4, 7]:
             l = num
             answer += 'L'
+        # 눌러야 할 번호가 3, 6, 9인 경우
         elif num in [3, 6, 9]:
             r = num
             answer += 'R'
+        # 눌러야 할 번호가 0, 2, 5, 8인 경우
         else:
             # 왼쪽 손이 더 가깝다면
             if pad[l][num] < pad[r][num]:
