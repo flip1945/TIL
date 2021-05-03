@@ -56,20 +56,24 @@ DFS를 이용해서 모든 경우의 수를 탐색했습니다.
 
 ~~~python
 input()
+# 수열를 입력받을 리스트
 n = list(map(int,input().split()))
+# 연산자를 입력받을 리스트
 o = list(map(int,input().split()))
 answer = []
 
 def dfs(i, op, result):
+    # 기저 조건, 마지막 숫자에 도달하는 경우 결과 값을 리스트에 저장하고 종료
     if i == len(n)-1:
         return answer.append(result)
-    if op[0]:
+    # 연산자가 있는 만큼 재귀 호출을 실행
+    if op[0]: # 더하기
         dfs(i + 1, [op[0]-1, op[1], op[2], op[3]], result + n[i + 1])
-    if op[1]:
+    if op[1]: # 빼기
         dfs(i + 1, [op[0], op[1]-1, op[2], op[3]], result - n[i + 1])
-    if op[2]:
+    if op[2]: # 곱하기
         dfs(i + 1, [op[0], op[1], op[2]-1, op[3]], result * n[i + 1])
-    if op[3]:
+    if op[3]: # 
         dfs(i + 1, [op[0], op[1], op[2], op[3]-1], int(result / n[i + 1]))
 
 dfs(0, o, n[0])
