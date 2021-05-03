@@ -73,7 +73,7 @@ def dfs(i, op, result):
         dfs(i + 1, [op[0], op[1]-1, op[2], op[3]], result - n[i + 1])
     if op[2]: # 곱하기
         dfs(i + 1, [op[0], op[1], op[2]-1, op[3]], result * n[i + 1])
-    if op[3]: # 
+    if op[3]: # 나누기
         dfs(i + 1, [op[0], op[1], op[2], op[3]-1], int(result / n[i + 1]))
 
 dfs(0, o, n[0])
