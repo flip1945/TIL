@@ -109,7 +109,7 @@ def solution(record):
     records = [i.split() for i in record]
     
     for r in records:
-        # Enter, Change만 실행
+        # Enter, Change할 때만 닉네임을 저장
         if len(r) > 2:
             # 딕셔너리에 User_ID를 키로 하고 닉네임을 값으로 해서 저장
             dic[r[1]] = r[2]
@@ -121,6 +121,7 @@ def solution(record):
         # 나간 경우 마지막에 저장된 닉네임을 기록에 반영
         elif r[0][0] == "L":
             answer.append(str(dic[r[1]])+"님이 나갔습니다.")
+        # 이름을 변경한 경우는 이미 처리 했기때문에 처리하지 않습니다.
     
     return answer
 ~~~
