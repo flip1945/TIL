@@ -56,7 +56,19 @@
 
 ### 문제풀이
 
- 
+이 문제는 모든 키 조합을 확인하는 완전탐색 문제입니다.   
+
+문제를 풀 로직을 짜는 데, 시간이 많이 걸린 문제였습니다.   
+
+심지어 로직을 잘 못 짜는 바람에 다시 처음부터 해서 더 그랬습니다.   
+
+로직을 잘 못 짠 이유는 유일성을 만족하는 키의 조합을 만드는데 어려움을 느껴서입니다.  
+
+모든 조합을 확인해야 하는데, 그렇게 하지 못해서 다시 짜게 됐습니다.   
+
+문제를 해결한 방법은 문제 설명에서 주어진 정보를 가지고 그대로 구현했던 것입니다.   
+
+> super key를 만들 수 있는 모든 조합을 만들어서 유일성을 확인하고, 그 조합에서 최소성을 만족하는 key들만 후보키로 지정했습니다. 
 
 ---
 
@@ -66,38 +78,46 @@
 from itertools import combinations as cb
 
 def solution(relation):
-    answer = []
     row = len(relation)
     col = len(relation[0])
     combi = []
-    primary = []
+    super_key = []
+    candidate_key = []
     
+    # 가능한 모든 조합을 combi에 저장
     for i in range(1, col + 1):
         combi += cb(range(col), i)
     # 모든 조합을 검사
     for com in combi:
-        super_key = []
-        
+        # 튜플들을 임시로 저장할 리스트
+        tmp_tuples = []
         # 조합별로 모든 행을 확인
         for r in range(row):
-            t = []
+            # 조합 정보를 담을 임시 리스트
+            tmp = []
             for c in com:
-                t.append(relation[r][c])
-            super_key.append(tuple(t))
+                tmp.append(relation[r][c])
+            tmp_tuples.append(tuple(tmp))
+        # 현재 조합이 유일성을 만족하면 현재 조합을 super_key 리스트에 저장
+        if len(set(tmp_tuples)) == row:
+            super_key.append(com)
             
-        if len(set(super_key)) == row:
-            primary.append(com)
-            
-    new = [primary[0]]
-    
-    while new:
-        new = []
-        answer.append(primary[0])
+    # super_key 중 최소성을 만족하는 candidate_key를 탐색
+    while True:
+        # 새로운 super_key 정보가 담길 리스트
+        new_super_key = []
+        # super_key 중 가장 앞에 있는 key를 cadidate_key로 지정
+        candidate_key.append(super_key[0])
         
-        for p in primary:
-            if not set(primary[0]) & set(p) == set(primary[0]):
-                new.append(p)
-        primary = new
+        for s in super_key:
+            # candidate_key가 포함된 super_key는 최소성을 만족하지 못하기 때문에 그 super_key를 제외하고, 새로운 super_key 리스트를 생성
+            if not (set(super_key[0]) & set(s) == set(super_key[0])):
+                new_super_key.append(s)
+        # super_key를 새로운 new_super_key로 갱신
+        super_key = new_super_key
+        # 더 이상 확인할 수 있는 key가 존재하지 않는다면 종료
+        if not new_super_key:
+            break
         
-    return len(answer)
+    return len(candidate_key)
 ~~~
