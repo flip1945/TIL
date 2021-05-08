@@ -94,72 +94,82 @@ def solution(nodeinfo):
 
     tree = make_tree(root_index, label_nodes, result_list)
 
+    # 입력값이 1개면 트리가 생성되지 않으므로 예외처리
     if tree is None:
         return [[1], [1]]
-
+    # 결과에 전위 순회 값을 저장
     answer.append(preorder_dfs(tree, root_index, []))
+    # 결과에 후위 순회 값을 저장
     answer.append(postorder_dfs(tree, root_index, []))
 
     return answer
 
-
+# nodes의 x값을 기준으로 왼쪽, 오른쪽 딕셔너리를 생성하는 함수
 def get_side_list(root_index, nodes):
     left_list = {}
     right_list = {}
 
     for i in nodes.keys():
-        # 왼쪽 트리 리스트
+        # 왼쪽 트리 딕셔너리 생성
         if nodes[i][0] < nodes[root_index][0]:
             left_list[i] = nodes[i]
-        # 오른쪽 트리 리스트
+        # 오른쪽 트리 딕셔너리 생성
         elif nodes[i][0] > nodes[root_index][0]:
             right_list[i] = nodes[i]
 
     return left_list, right_list
 
-
+# nodes의 루트 노드를 반환하는 함수
 def get_root(nodes):
     m = -1
-    root_index = -1
+    root_index = 0
     for i in nodes.keys():
         if nodes[i][1] > m:
             root_index = i
             m = nodes[i][1]
     return root_index
 
-
+# 재귀적으로 트리를 만드는 함수
 def make_tree(root_index, nodes, result_list):
+    # 노드의 갯수가 자기 자신 1개 뿐이라면 종료
     if len(nodes) == 1:
         return
+    # 현재 노드를 기준으로 왼쪽, 오른쪽 딕셔너리 생성
     left_list, right_list = get_side_list(root_index, nodes)
-
+    # 현재 노드보다 x값이 적은 딕셔너리 존재한다면
     if left_list:
+        # 왼쪽 루트 노드를 정함
         left_root_index = get_root(left_list)
+        # result_list에 만든 트리 정보를 저장
         result_list[root_index].append(left_root_index)
+        # 왼쪽 딕셔너리로 구성된 트리를 재귀로 생성
         make_tree(left_root_index, left_list, result_list)
-
+    # 현재 노드보다 x값이 큰 딕셔너리가 존재한다면
     if right_list:
+        # 오른쪽 루트 노드를 정함
         right_root_index = get_root(right_list)
+        # result_list에 만든 트리 정보를 저장
         result_list[root_index].append(right_root_index)
+        # 오른쪽 딕셔너리로 구성된 트리를 재귀로 생성
         make_tree(right_root_index, right_list, result_list)
-
+    # 결과 리스트를 반환
     return result_list
 
-
+# 리스트를 번호가 있는 딕셔너리로 저장하는 함수
 def label(nodes):
     dic = {}
     for i in range(len(nodes)):
         dic[i] = nodes[i]
     return dic
 
-
+# 전위 순회
 def preorder_dfs(tree, node, result):
     result.append(node + 1)
     for n in tree[node]:
         preorder_dfs(tree, n, result)
     return result
 
-
+# 후위 순회
 def postorder_dfs(tree, node, result):
     for n in tree[node]:
         postorder_dfs(tree, n, result)
