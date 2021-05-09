@@ -82,6 +82,7 @@
 #### 나의 풀이
 
 1. 정확성 테스트만을 위한 풀이
+
 ~~~python
 def solution(food_times, k):
     count = 0
@@ -109,6 +110,48 @@ def solution(food_times, k):
             i = 0
     
     return i + 1
+~~~
+
+~~~python
+class Node(object):
+    def __init__(self, index, data):
+        self.left = None
+        self.right = None
+        self.data = data
+        self.index = index
+
+
+def solution(food_times, k):
+    head_node = Node(1, food_times[0])
+    cur_node = head_node
+    
+    if sum(food_times) < k:
+        return -1
+
+    # create Linked List
+    for i in range(1, len(food_times)):
+        new_node = Node(i + 1, food_times[i])
+        new_node.left = cur_node
+        cur_node.right = new_node
+
+        cur_node = new_node
+    # create Circular List
+    head_node.left = cur_node
+    cur_node.right = head_node
+
+    cur_node = head_node
+    for _ in range(k):
+        cur_node.data -= 1
+        # 현재 노드의 음식이 없다면
+        if not cur_node.data:
+            cur_node.left.right = cur_node.right
+            cur_node.right.left = cur_node.left
+        # 현재 노드가 홀로 남은 노드이고, 음식을 다 먹었다면
+        elif cur_node.data < 0:
+            return -1
+        cur_node = cur_node.right
+
+    return cur_node.index if cur_node.data else -1
 ~~~
 
 2. 효율성 테스트도 통과하는 풀이
