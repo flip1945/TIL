@@ -113,10 +113,12 @@ def chk_vps(s):
             # stack이 비었거나 괄호가 매치되지 않는다면 올바른 괄호 문자열이 아니기 때문에 False를 반환합니다.
             if not stack or match[stack.pop()] != i:
                 return False
+            # 올바른 매치인지 확인하면서 stack의 top이 pop이 됐기 때문에 따로 stack을 pop하지 않습니다.
         # 여는 괄호라면
         else:
             # stack에 괄호를 push합니다.
             stack.append(i)
-    # stack이 비어 있지 않다면 올바른 괄호 문자열이 아니기 때문에 False를 반환하고, 비어 있다면 올바른 괄호 문자열이기 때문에 True를 반환합니다.
+    # stack이 비어 있지 않다면 올바른 괄호 문자열이 아니기 때문에 False를 반환하고
+    # 비어 있다면 올바른 괄호 문자열이기 때문에 True를 반환합니다.
     return False if stack else True
 ~~~
