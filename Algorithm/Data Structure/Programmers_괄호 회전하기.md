@@ -114,6 +114,7 @@ def chk_vps(s):
             if not stack or match[stack.pop()] != i:
                 return False
             # 올바른 매치인지 확인하면서 stack의 top이 pop이 됐기 때문에 따로 stack을 pop하지 않습니다.
+        
         # 여는 괄호라면
         else:
             # stack에 괄호를 push합니다.
