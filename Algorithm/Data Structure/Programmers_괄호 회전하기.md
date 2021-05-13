@@ -90,25 +90,33 @@ from collections import deque
 
 def solution(s):
     answer = 0
-    
+    # 문자열 회전을 위해 queue를 이용합니다.
     queue = deque(list(s))
-    
+    # 문자열의 길이만큼 반복
     for i in range(len(s)):
+        # 올바른 괄호 문자열이라면
         if chk_vps(queue):
+            # 정답에 1을 추가합니다.
             answer += 1
+        # 다음 문자열 확인을 위해 문자열을 왼쪽으로 회전시킵니다.
         queue.rotate(-1)
     return answer
 
 def chk_vps(s):
     match = {"{": "}", "(": ")", "[": "]"}
+    # 올바른 괄호 확인을 위해 stack을 사용합니다.
     stack = []
     
     for i in s:
+        # 닫는 괄호라면
         if i in "]})":
+            # stack이 비었거나 괄호가 매치되지 않는다면 올바른 괄호 문자열이 아니기 때문에 False를 반환합니다.
             if not stack or match[stack.pop()] != i:
                 return False
+        # 여는 괄호라면
         else:
+            # stack에 괄호를 push합니다.
             stack.append(i)
-            
+    # stack이 비어 있지 않다면 올바른 괄호 문자열이 아니기 때문에 False를 반환하고, 비어 있다면 올바른 괄호 문자열이기 때문에 True를 반환합니다.
     return False if stack else True
 ~~~
