@@ -1,4 +1,4 @@
-# 예상 대진표(Level 2)
+# 행렬 (Level 2)
 
 ### 문제 설명
 
@@ -96,8 +96,8 @@ def solution(rows, columns, queries):
     for x1, y1, x2, y2 in queries:
         rotate = []
         # 테두리의 x좌표와 y좌표를 리스트로 만듭니다.
-        x_list = [x1] * (y2 - y1) + list(range(x1+1, x2+1))+ [x2] * (y2 - y1) + list(range(x2-1, x1-1, -1))
-        y_list = list(range(y1+1, y2+1)) + [y2] * (x2 - x1) + list(range(y2-1, y1-1, -1)) + [y1] * (x2 - x1)
+        x_list = [x1] * (y2 - y1) + list(range(x1+1, x2+1))+ [x2] * (y2 - y1) + list(range(x2-1, x1-1,-1))
+        y_list = list(range(y1+1, y2+1)) + [y2] * (x2 - x1) + list(range(y2-1, y1-1,-1)) + [y1] * (x2 - x1)
         
         cur = table[x1-1][y1-1]
         # 테두리의 값들을 회전 시킴과 동시에 리스트에 저장합니다.
@@ -108,23 +108,4 @@ def solution(rows, columns, queries):
         # 저장된 값중 가장 작은 값을 정답 리스트에 저장합니다.
         answer.append(min(rotate))
     return answer
-~~~
-
-#### 다른 사람의 풀이
-
-1. 정석적인 풀이
-~~~python
-def solution(n,a,b):
-    answer = 0
-    while a != b:
-        answer += 1
-        a, b = (a+1)//2, (b+1)//2
-
-    return answer
-~~~
-
-2. 비트 연산을 이용한 풀이
-~~~python
-def solution(n,a,b):
-    return ((a-1)^(b-1)).bit_length()
 ~~~
