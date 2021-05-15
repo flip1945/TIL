@@ -96,8 +96,8 @@ def solution(rows, columns, queries):
     for x1, y1, x2, y2 in queries:
         rotate = []
         # 테두리의 x좌표와 y좌표를 리스트로 만듭니다.
-        x_list = [x1] * (y2 - y1) + list(range(x1+1, x2+1))+ [x2] * (y2 - y1) + list(range(x2-1, x1-1,-1))
-        y_list = list(range(y1+1, y2+1)) + [y2] * (x2 - x1) + list(range(y2-1, y1-1,-1)) + [y1] * (x2 - x1)
+        x_list = [x1] * (y2-y1) + list(range(x1+1, x2+1))+ [x2] * (y2-y1) + list(range(x2-1, x1-1, -1))
+        y_list = list(range(y1+1, y2+1)) + [y2] * (x2-x1) + list(range(y2-1, y1-1, -1)) + [y1] * (x2-x1)
         
         cur = table[x1-1][y1-1]
         # 테두리의 값들을 회전 시킴과 동시에 리스트에 저장합니다.
