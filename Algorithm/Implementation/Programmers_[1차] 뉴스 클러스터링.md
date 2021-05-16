@@ -87,7 +87,7 @@ def solution(str1, str2):
     return int(sum(n.values()) / sum(u.values()) * 65536) if sum(u.values()) else 65536
 ~~~
 
-2. 다음은 풀이
+2. 다듬은 풀이
 
 ~~~python
 from collections import Counter as c
