@@ -72,6 +72,8 @@ def solution(number, k):
     return "".join(stack[:-(k-end)])
 ~~~
 
+---
+
 #### 다른 사람의 풀이
 
 ~~~python
