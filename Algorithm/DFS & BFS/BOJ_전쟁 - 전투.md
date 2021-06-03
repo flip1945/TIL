@@ -61,32 +61,38 @@ solution 함수가 안에 dfs함수를 선언하면 매개 변수의 수를 줄�
 
 ~~~python
 def solution(n, m, soldiers):
+    # 방문 리스트 생성
     visited = [[False for col in range(n)] for row in range(m)]
     answer = {"W": [], "B": []}
-
+    # 모든 병사 확인
     for row in range(m):
         for col in range(n):
+            # 이미 방문한 병사라면 생략
             if visited[row][col]:
                 continue
             soldier = soldiers[row][col]
+            # 정답 리스트에 병사들의 숫자 추가
             answer[soldier].append(dfs(row, col, n, m, soldiers, visited, soldier, 0))
     
     print(sum([ans**2 for ans in answer["W"]]), sum([ans**2 for ans in answer["B"]]))
 
-
+# 그래프를 생성하는 함수
 def input_soldiers(n):
     soldiers = [list(input()) for _ in range(n)]
     return soldiers
 
 
 def dfs(x, y, n, m, soldiers, visited, t, result):
+    # 이미 방문 했거나 확인하고 있는 병사의 종류가 다르다면 바로 종료
     if visited[x][y] or soldiers[x][y] != t:
         return result
-
+    # 현재 확인하는 병사를 방문 처리
     visited[x][y] = True
     result += 1
+    # 4가지 방향으로 dfs 실행
     for way in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
         dx, dy = x + way[0], y + way[1]
+        # 좌표를 벗어나는 경우는 생략
         if dx < 0 or dx >= m or dy < 0 or dy >= n:
             continue
         
