@@ -92,20 +92,24 @@
 from collections import deque
 
 s = int(input())
-
+# 걸린 시간을 저장할 리스트
 dp = [[0] * 1001 for i in range(1001)]
+# 출발점의 시간을 초기화
 dp[1][1] = 1
+# queue에 시작점, 시작 시간을 push
 que = deque([(1, 1)])
-
+# bfs 실행
 while que:
     cur, copy = que.popleft()
-
+    # 현재 이모티콘의 개수가 목표 이모티콘의 개수와 같다면 종료
     if cur == s:
         print(dp[cur][copy])
         break
-
+    # 이모티콘 1개 지우기, 현재 화면에 붙여넣기, 현재 화면의 이모티콘을 복사하기
     for n, c in [(cur - 1, copy), (cur + copy, copy), (cur, cur)]:
+        # 좌표를 벗어나지 않는 경우, 한 번도 방문하지 않은 경우(이모티콘의 개수, 클립보드의 이모티콘 개수로 구분) 실행
         if 1 <= n <= 1000 and not dp[n][c]:
             que.append((n, c))
+            # 현재 이모티콘, 클립보드의 개수의 시간 갱신
             dp[n][c] = dp[cur][copy] + 1
 ~~~
