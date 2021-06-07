@@ -90,28 +90,34 @@ n, m = map(int, input().split())
 answer = []
 
 graph = [list(map(int, input().split())) for i in range(n)]
-
+# bfs 함수
 def bfs(row, col):
+    # queue에 시작점의 좌표, 상어까지의 최단 거리를 push
     que = deque([(row, col, 0)])
+    # 8가지 방향으로 탐색하기 위한 방향 리스트
     way = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
+    # 방문 리스트 초기화
     visited = [[False] * m for _ in range(n)]
+    # 시작점의 좌표는 방문처리
     visited[row][col] = True
-
+    # bfs 실행
     while que:
         x, y, sec = que.popleft()
-
+        # 현재 좌표에 상어가 있다면 지금까지의 시간을 반환하고 종료
         if graph[x][y]:
             return sec
-
+        # 8가지 방향으로 탐색
         for dx, dy in way:
             dx += x
             dy += y
-
+            # 좌표를 벗어나지 않고, 방문하지 않은 경우만 실행
             if 0 <= dx < n and 0 <= dy < m and not visited[dx][dy]:
+                # 다음에 갈 좌표를 방문처리
                 visited[dx][dy] = True
                 que.append((dx, dy, sec + 1))
+    # 상어가 1마리도 없는 경우 예외처리
     return 0
-
+# 모든 좌표에서 상어까지의 최단 거리를 탐색
 for row in range(n):
     for col in range(m):
         answer.append(bfs(row, col))
