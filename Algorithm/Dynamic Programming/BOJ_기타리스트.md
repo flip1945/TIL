@@ -54,13 +54,14 @@ from collections import deque
 
 n, s, m = map(int, input().split())
 v = list(map(int, input().split()))
-
+# 볼륨의 크기를 저장할 2차원 리스트
 dp = [[-1] * (m+1) for _ in range(n)]
+# bfs를 위해 queue를 생성하고, 시작점과 시작 볼륨을 
 que = deque([(0, s)])
 
 while que:
     i, cur = que.popleft()
-    # 볼륨을 줄리는지, 늘리는지 
+    # 볼륨을 줄리는지, 늘리는지 모두 탐색
     for ne in [cur-v[i], cur+v[i]]:
         # 볼륨의 범위를 벗어나는지 확인
         if 0<=ne<=m and dp[i][ne] == -1:
