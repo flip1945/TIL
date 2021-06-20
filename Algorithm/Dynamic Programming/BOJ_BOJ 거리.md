@@ -1,4 +1,4 @@
-# 점프(Silver 2)
+# BOJ 거리(Silver 1)
 
 ### 문제
 
