@@ -44,7 +44,13 @@
 
 ### 문제풀이
 
-  
+이번 문제는 Dynamic Programming 더하기 배낭 문제입니다.   
+
+무게와 가치가 다른 물건을 배낭에 가득 채워서 가장 가치가 높은 값은 무엇인가를 구하는 문제입니다.   
+
+저는 처음에 입력받을 때, 정렬을 해서 물건의 무게를 오름차순으로, 가치를 내림차순으로 정렬했습니다.   
+
+그런데 다른 분이 푸신 풀이를 보니 굳이 정렬할 필요가 없었던 것 같습니다.   
 
 ---
 
@@ -64,4 +70,18 @@ for i in range(n):
             dp[j + w] = max(dp[j + w], dp[j] + v)
 
 print(max(dp))
+~~~
+
+---
+
+#### 다른 사람의 풀이
+
+~~~python
+n, k = map(int, input().split())
+dp = [0 for _ in range(k+1)]
+for _ in range(n):
+    w, v = map(int, input().split())
+    for i in range(k, w-1, -1):
+        dp[i] = max(dp[i], dp[i-w] + v)
+print(dp[-1])
 ~~~
