@@ -58,8 +58,6 @@
 27
 ~~~
 
-[출처](https://www.acmicpc.net/problem/11058)
-
 ---
 
 #### 힌트
@@ -69,6 +67,8 @@ N = 3인 경우에 A, A, A를 눌러 A 3개를 출력할 수 있다.
 N = 7인 경우에는 A, A, A, Ctrl-A, Ctrl-C, Ctrl-V, Ctrl-V를 눌러 9개를 출력할 수 있다.   
 
 N = 11인 경우에는 A, A, A, Ctrl-A, Ctrl-C, Ctrl-V, Ctrl-V, Ctrl-A, Ctrl-C, Ctrl-V, Ctrl-V 를 눌러 27개를 출력할 수 있다.   
+
+[출처](https://www.acmicpc.net/problem/11058)
 
 ---
 
