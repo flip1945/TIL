@@ -73,6 +73,8 @@
 
 #### 나의 풀이
 
+1. 정답으로 제출한 풀이
+
 ~~~python
 n = int(input())
 nums = list(map(int, input().split()))
@@ -97,6 +99,25 @@ for i in range(2, len(nums) - 1):
     cur = new
 
 print(cur[nums[-1]])
+~~~
+
+2. 제출 후 다듬은 풀이
+
+~~~python
+n = int(input())
+nums = list(map(int, input().split()))
+
+dp = [[0 for _ in range(21)] for _ in range(n)]
+dp[1][nums[0]] = 1
+
+for i in range(1, n - 1):
+    for j in range(21):
+        if j + nums[i] <= 20:
+            dp[i+1][j + nums[i]] += dp[i][j]
+        if j - nums[i] >= 0:
+            dp[i+1][j - nums[i]] += dp[i][j]
+
+print(dp[n-1][nums[-1]])
 ~~~
 
 ---
