@@ -74,7 +74,7 @@ Tn = 1 + 2 + 3 + ... + n = n(n+1)/2
 
 #### 나의 풀이
 
-~~~python
+~~~java
 import java.io.*;
 import java.util.*;
 
@@ -121,7 +121,7 @@ public class Main {
 
 #### 다른 사람의 풀이
 
-~~~python
+~~~java
 import java.util.Scanner;
 
 public class Main {
