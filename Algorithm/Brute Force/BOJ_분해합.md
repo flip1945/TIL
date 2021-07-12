@@ -49,7 +49,7 @@ N의 가장 작은 생성자를 구하는 문제인데, N의 크기가 100만 �
 
 #### 나의 풀이
 
-~~~python
+~~~java
 import java.*;
 
 public class Main {
@@ -83,7 +83,7 @@ public class Main {
 
 #### 다른 사람의 풀이
 
-~~~python
+~~~java
 import java.util.Scanner;
 
 public class Main {
