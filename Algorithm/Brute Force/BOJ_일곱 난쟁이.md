@@ -67,7 +67,7 @@ selected 배열이 true인 난쟁이를 2명 선택하고 선택하지 않은 �
 
 #### 나의 풀이
 
-~~~python
+~~~java
 import java.io.*;
 import java.util.*;
 
@@ -122,7 +122,7 @@ public class Main {
 
 #### 다른 사람의 풀이
 
-~~~python
+~~~java
 import java.util.*;
 
 public class Main {
