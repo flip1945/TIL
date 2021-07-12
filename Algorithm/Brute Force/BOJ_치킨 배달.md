@@ -144,21 +144,23 @@ n, m = map(int, input().split())
 city = [list(map(int, input().split())) for _ in range(n)]
 home = []
 chicken = []
+# 가장 작은 거리를 구하기 위한 변수
 min_dist = int(10e9)
-
+# 집의 위치와 치킨집의 위치를 리스트에 저장
 for i in range(n):
     for j in range(n):
         if city[i][j] == 1:
             home.append((i, j))
         elif city[i][j] == 2:
             chicken.append((i, j))
-
+# 도시의 치킨 거리를 구하는 함수
 def get_chicken_dist(chick):
     sum_dist = 0
     for h_x, h_y in home:
         sum_dist += min([abs(h_x - c_x) + abs(h_y - c_y) for c_x, c_y in chick])
     return sum_dist
 
+# 완전 탐색을 하는 함수 (조합을 구하는 함수)
 def back_tacking(cnt, cur, chick):
     global min_dist
 
