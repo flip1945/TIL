@@ -70,7 +70,30 @@ N×M (5≤N, M≤100)의 모눈종이 위에 아주 얇은 치즈가 <그림 1>�
 
 ### 문제풀이
 
+이번 문제는 bfs 문제입니다.   
+
+이 문제를 풀 때, 어려웠던 점은 문제를 이해하는 것이었습니다.   
     
+처음에 문제를 풀 때, 모눈종이의 가장자리가 의미하는 것이 주어진 좌표 바깥쪽이라고 잘못 생각해서 문제를 어렵게 풀었습니다.   
+(어렵게 푼 방법으로도 정답을 맞추긴 했습니다.)
+
+그런데 다른 분들의 풀이를 보니 제가 가장자리의 의미를 잘못 알고 있다는 것을 알았습니다.   
+    
+왠지 난이도에 비해 너무 어렵다고 생각했는데, 제 실수였습니다.
+
+그래서 문제를 다시 풀어서 제출했습니다.
+
+이 문제의 풀이방법은 다음과 같습니다.
+
+1. (0, 0) 좌표에서 bfs를 실행한다.
+
+2. 가장자리에는 치즈가 놓이지 않으므로 bfs를 실행하면 치즈 외부의 공기를 알아낼 수 있다.
+
+3. 치즈 외부 공기에 2회 이상 노출된 치즈를 지운다.
+
+4. 모든 치즈가 지워질 때까지 반복한다.
+    
+저는 bfs를 실행하고, 지우는 부분이 분리돼 있는데, 이걸 한 번에 하신 분이 있어서 아래에 코드를 첨부합니다.
 
 ---
 
@@ -79,12 +102,15 @@ N×M (5≤N, M≤100)의 모눈종이 위에 아주 얇은 치즈가 <그림 1>�
 
 1. 잘못 파악한 문제 풀이
 ~~~python
+# 가장자리를 좌표 바로 바깥으로 착각한 
 from collections import deque
 
 n, m = map(int, input().split())
 board = [list(map(int, input().split())) for _ in range(n)]
 
-
+# 좌표에 바깥에 도달한 공기들은 치즈 내부의 공기가 아님
+# 도달하지 못한 공기들은 치즈 내부의 공기임
+# 이것을 탐색하는 bfs
 def bfs(row, col):
     queue = deque([(row, col)])
     visited[row][col] = True
@@ -114,6 +140,7 @@ def bfs(row, col):
 
     return True
 
+# 외부 공기에 2변이상 노출된 치즈를 지우는 함수
 def remove_cheese():
     remove = []
     for row in range(n):
@@ -135,7 +162,7 @@ def remove_cheese():
 
 answer = 0
 
-
+# 모든 치즈가 지워질 때까지 
 while True:
     visited = [[False] * m for _ in range(n)]
     cheese_area = [v[:] for v in visited]
@@ -158,7 +185,7 @@ print(answer)
 from collections import deque
 n, m = map(int, input().split())
 board = [list(map(int, input().split())) for _ in range(n)]
-
+# (0, 0)에서 bfs를 실행해 외부 공기 부분만 방문처리
 def bfs():
     queue = deque([(0, 0)])
     while queue:
@@ -170,7 +197,7 @@ def bfs():
             if 0 <= nx < n and 0 <= ny < m and not visited[nx][ny] and not board[nx][ny]:
                 visited[nx][ny] = True
                 queue.append((nx, ny))
-
+# 방문 처리된 외부 공기를 2변 이상 만난 치즈들을 지움
 def remove_cheese():
     remove = []
     for x in range(n):
@@ -191,7 +218,7 @@ def remove_cheese():
     return remove
 
 answer = 0
-
+# 모든 치즈가 지워질 때까지 반복
 while True:
     visited = [[False] * m for i in range(n)]
     bfs()
