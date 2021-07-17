@@ -102,7 +102,7 @@ N×M (5≤N, M≤100)의 모눈종이 위에 아주 얇은 치즈가 <그림 1>�
 
 1. 잘못 파악한 문제 풀이
 ~~~python
-# 가장자리를 좌표 바로 바깥으로 착각한 
+# 가장자리를 좌표 바로 바깥으로 착각한 풀이
 from collections import deque
 
 n, m = map(int, input().split())
@@ -110,7 +110,7 @@ board = [list(map(int, input().split())) for _ in range(n)]
 
 # 좌표에 바깥에 도달한 공기들은 치즈 내부의 공기가 아님
 # 도달하지 못한 공기들은 치즈 내부의 공기임
-# 이것을 탐색하는 bfs
+# 치즈 내부 공기를 탐색하는 함수
 def bfs(row, col):
     queue = deque([(row, col)])
     visited[row][col] = True
