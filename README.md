@@ -10,7 +10,7 @@
 * [Brute Force](https://github.com/flip1945/TIL/tree/main/Algorithm/Brute%20Force)
 * [DFS & BFS](https://github.com/flip1945/TIL/tree/main/Algorithm/DFS%20%26%20BFS)
 * [Data Structure](https://github.com/flip1945/TIL/tree/main/Algorithm/Data%20Structure)
-* [Dinamic Programming](https://github.com/flip1945/TIL/tree/main/Algorithm/Dynamic%20Programming)
+* [Dynamic Programming](https://github.com/flip1945/TIL/tree/main/Algorithm/Dynamic%20Programming)
 * [Graph](https://github.com/flip1945/TIL/tree/main/Algorithm/Graph)
 * [Implementation](https://github.com/flip1945/TIL/tree/main/Algorithm/Implementation)
 * [Greedy](https://github.com/flip1945/TIL/tree/main/Algorithm/Greedy)
