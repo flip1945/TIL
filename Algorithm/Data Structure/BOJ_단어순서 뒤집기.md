@@ -61,25 +61,25 @@ StringTokenizer를 이용해 단어를 분리하고 분리한 단어를 stack에
 import java.util.*;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		Stack<String> stack = new Stack<>();
-		int n = Integer.parseInt(sc.nextLine());
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Stack<String> stack = new Stack<>();
+        int n = Integer.parseInt(sc.nextLine());
 
-		for (int i = 1; i <= n; i++) {
-			StringTokenizer st = new StringTokenizer(sc.nextLine(), " ");
-			StringBuilder sb = new StringBuilder();
+        for (int i = 1; i <= n; i++) {
+            StringTokenizer st = new StringTokenizer(sc.nextLine(), " ");
+            StringBuilder sb = new StringBuilder();
 
-			while (st.hasMoreTokens()) {
-				stack.push(st.nextToken());
-			}
+            while (st.hasMoreTokens()) {
+                stack.push(st.nextToken());
+            }
 
-			while (!stack.empty()) {
-				sb.append(stack.pop() + " ");
-			}
+            while (!stack.empty()) {
+                sb.append(stack.pop() + " ");
+            }
 
-			System.out.println("Case #" + i + ": " + sb);
-		}
-	}
+            System.out.println("Case #" + i + ": " + sb);
+        }
+    }
 }
 ~~~
