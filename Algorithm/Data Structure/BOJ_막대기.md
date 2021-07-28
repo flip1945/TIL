@@ -75,7 +75,7 @@ N개의 막대기에 대한 높이 정보가 주어질 때, 오른쪽에서 보�
 
 #### 나의 풀이
 
-~~~python
+~~~java
 import java.io.*;
 import java.util.*;
 
