@@ -37,7 +37,7 @@ CAPCAK
 
 ### 문제풀이
 
-이 문제는 Dynamic Programming 알고리즘입니다.   
+이 문제는 Dynamic Programming 알고리즘으로 풀어야 하는 문제입니다.   
 
 저는 dp 문제를 여러번 풀어서 꽤 익숙해진 줄 알았는데, 아직도 많이 부족한 것 같습니다.   
 
