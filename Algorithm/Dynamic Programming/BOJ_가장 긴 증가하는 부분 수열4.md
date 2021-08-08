@@ -69,7 +69,7 @@ for i in range(n):
 
 m = max(dp)
 print(m)
-# 역순으로 정답 수열을 
+# 역순으로 정답 수열을 찾음
 answer = []
 for i in range(n-1, -1, -1):
     if dp[i] == m:
