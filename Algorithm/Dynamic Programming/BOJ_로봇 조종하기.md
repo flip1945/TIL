@@ -91,7 +91,7 @@ print(dp[n-1][m-1])
 
 #### 다른 사람의 풀이
 
-~~~pyhton
+~~~python
 N, M = map(int, input().split())
 A = [list(map(int, input().split())) for _ in range(N)]
 dp = []
