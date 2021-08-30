@@ -105,6 +105,8 @@ def recursive(s, e, n):
 recursive(0, 2**(n*2)-1, n-1)
 ~~~
 
+---
+
 #### 다른 사람의 풀이
 
 ~~~python
