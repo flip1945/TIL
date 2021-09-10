@@ -157,6 +157,8 @@ print(answer)
 
 1. 플로이드-와샬 알고리즘
 
+출처 : https://velog.io/@jinho0705/BOJ-2458.-%ED%82%A4-%EC%88%9C%EC%84%9Cpython
+
 ~~~python
 import sys
 input = sys.stdin.readline
@@ -187,8 +189,6 @@ print(answer)
 ~~~
 
 2. BFS 알고리즘
-
-출처 : https://velog.io/@jinho0705/BOJ-2458.-%ED%82%A4-%EC%88%9C%EC%84%9Cpython
 
 ~~~python
 import sys
