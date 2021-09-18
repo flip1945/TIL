@@ -43,7 +43,7 @@
 
 802cm 랜선에서 4개, 743cm 랜선에서 3개, 457cm 랜선에서 2개, 539cm 랜선에서 2개를 잘라내 모두 11개를 만들 수 있다.
 
-[출처](https://www.acmicpc.net/problem/1654)
+출처 : https://www.acmicpc.net/problem/1654
 
 ---
 
@@ -84,6 +84,8 @@ print(high)
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/19212932
 
 ~~~python
 R=range
