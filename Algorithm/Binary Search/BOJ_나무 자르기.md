@@ -46,7 +46,7 @@
 36
 ~~~
 
-[출처](https://www.acmicpc.net/problem/2805)
+출처 : https://www.acmicpc.net/problem/2805
 
 ---
 
@@ -98,6 +98,8 @@ print(answer[1])
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/23602006
 
 ~~~python
 n,m=list(map(int,input().split()))
