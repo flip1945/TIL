@@ -35,7 +35,7 @@ M개의 줄에 답을 출력한다. 존재하면 1을, 존재하지 않으면 0�
 1
 ~~~
 
-[출처](https://www.acmicpc.net/problem/1920)
+출처 : https://www.acmicpc.net/problem/1920
 
 ---
 
@@ -79,12 +79,12 @@ while nums:
 
 #### 다른 사람의 풀이
 
-~~~python
-n = input()
-a = set(input().split())
-m = input()
-b = input().split()
+출처 : https://www.acmicpc.net/source/31557603
 
-for i in b:
-    print(1 if i in a else 0)
+~~~python
+n = int(input())
+a = {int(i) for i in input().split()}
+m = int(input())
+for i in input().split():
+    print(1 if int(i) in a else 0)
 ~~~
