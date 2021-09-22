@@ -36,6 +36,8 @@ N(2 ≤ N ≤ 10,000)개의 섬으로 이루어진 나라가 있다. 이들 중 
 3
 ~~~
 
+출처 : https://www.acmicpc.net/problem/1939
+
 ---
 
 ### 문제풀이
@@ -109,6 +111,8 @@ print(right)
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/19261362
 
 ~~~python
 from collections import defaultdict as dd
