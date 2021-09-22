@@ -40,7 +40,7 @@
 
 <img src="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/upload/201006/piz2.PNG">
 
-[출처](https://www.acmicpc.net/problem/1756)
+출처 : https://www.acmicpc.net/problem/1756
 
 ---
 
@@ -90,6 +90,8 @@ print(limit + 1 if limit >= 0 else 0)
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/11795969
 
 ~~~python
 input()
