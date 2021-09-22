@@ -33,7 +33,7 @@
 1 0 0 1 1 0 0 1
 ~~~
 
-[출처](https://www.acmicpc.net/problem/10815)
+출처 : https://www.acmicpc.net/problem/10815
 
 ---
 
@@ -95,6 +95,8 @@ for num in m:
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/31792481
 
 ~~~python
 input()
