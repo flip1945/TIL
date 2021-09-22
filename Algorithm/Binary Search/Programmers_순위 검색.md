@@ -105,7 +105,7 @@
 
 * `"- and - and - and - 150"` : 코딩테스트 점수를 150점 이상 받은 지원자는 4명 입니다.
 
-[출처](https://programmers.co.kr/learn/courses/30/lessons/72412)
+출처 : https://programmers.co.kr/learn/courses/30/lessons/72412
 
 ---
 
