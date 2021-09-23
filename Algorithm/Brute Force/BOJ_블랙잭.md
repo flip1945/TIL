@@ -1,4 +1,4 @@
-# 블랙잭(Bronze 2)
+# 블랙잭 (Bronze 2)
 
 ### 문제 설명
 
@@ -53,7 +53,7 @@ N장의 카드에 써져 있는 숫자가 주어졌을 때, M을 넘지 않으�
 497
 ~~~
 
-[출처](https://www.acmicpc.net/problem/2798)
+출처 : https://www.acmicpc.net/problem/2798
 
 ---
 
