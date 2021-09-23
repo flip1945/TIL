@@ -1,4 +1,4 @@
-# 분해합(Bronze 2)
+# 분해합 (Bronze 2)
 
 ### 문제 설명
 
@@ -33,7 +33,7 @@
 
 ---
 
-[출처](https://www.acmicpc.net/problem/2231)
+출처 : https://www.acmicpc.net/problem/2231
 
 ---
 
@@ -82,6 +82,8 @@ public class Main {
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/30759226
 
 ~~~java
 import java.util.Scanner;
