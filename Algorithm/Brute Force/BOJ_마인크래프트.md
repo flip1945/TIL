@@ -77,7 +77,7 @@ lvalue는 세로 N, 가로 M 크기의 집터를 골랐다. 집터 맨 왼쪽 �
 
 ---
 
-[출처](https://www.acmicpc.net/problem/18111)
+출처 : https://www.acmicpc.net/problem/18111
 
 ---
 
@@ -131,6 +131,8 @@ print(*answer)
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/20636802
 
 ~~~python
 n,m,b=map(int,input().split())
