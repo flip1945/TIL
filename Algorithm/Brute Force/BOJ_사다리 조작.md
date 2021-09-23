@@ -1,4 +1,4 @@
-# 사다리 조작(Gold 4)
+# 사다리 조작 (Gold 4)
 
 ### 문제 설명
 
@@ -182,7 +182,7 @@ i번 세로선의 결과가 i번이 나오도록 사다리 게임을 조작하�
 </p>
 
 
-[출처](https://www.acmicpc.net/problem/15684)
+출처 : https://www.acmicpc.net/problem/15684
 
 ---
 
@@ -273,6 +273,8 @@ print(min(answer) if answer else -1)
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/22587682
 
 ~~~python
 def check(pos) :
