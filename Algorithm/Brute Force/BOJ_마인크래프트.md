@@ -75,8 +75,6 @@ lvalue는 세로 N, 가로 M 크기의 집터를 골랐다. 집터 맨 왼쪽 �
 22 63
 ~~~
 
----
-
 출처 : https://www.acmicpc.net/problem/18111
 
 ---
