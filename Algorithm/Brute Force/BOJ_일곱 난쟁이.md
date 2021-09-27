@@ -1,4 +1,4 @@
-# 일곱 난쟁이(Bronze 2)
+# 일곱 난쟁이 (Bronze 2)
 
 ### 문제 설명
 
@@ -49,7 +49,7 @@
 
 ---
 
-[출처](https://www.acmicpc.net/problem/2309)
+출처 : https://www.acmicpc.net/problem/2309
 
 ---
 
@@ -121,6 +121,8 @@ public class Main {
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/24770063
 
 ~~~java
 import java.util.*;
