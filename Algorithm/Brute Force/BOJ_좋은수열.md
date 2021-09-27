@@ -1,4 +1,4 @@
-# 좋은수열(Gold 4)
+# 좋은수열 (Gold 4)
 
 ### 문제 설명
 
@@ -49,7 +49,7 @@
 1213121
 ~~~
 
-[출처](https://www.acmicpc.net/problem/2661)
+출처 : https://www.acmicpc.net/problem/2661
 
 ---
 
@@ -101,14 +101,18 @@ recursive([])
 
 #### 다른 사람의 풀이
 
+출처 : https://www.acmicpc.net/source/27306511
+
 ~~~python
+import sys
+
 def dfs(s, c):
     for i in range(1, c//2+1):
         if s[-i:] == s[-2*i:-i]:
             return
     if c == n:
         print(s)
-        exit()
+        sys.exit()
 
     for i in ['1', '2', '3']:
         dfs(s+i, c+1)
