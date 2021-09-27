@@ -102,7 +102,7 @@ N=4이고, S가 아래와 같은 경우를 살펴보자.
 
 예제 2의 경우에 (1, 3, 6), (2, 4, 5)로 팀을 나누면 되고, 예제 3의 경우에는 (1, 2, 4, 5), (3, 6, 7, 8)로 팀을 나누면 된다.
 
-[출처](https://www.acmicpc.net/problem/14889)
+출처 : https://www.acmicpc.net/problem/14889
 
 ---
 
@@ -172,6 +172,8 @@ print(m)
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/30543764
 
 ~~~python
 from itertools import combinations
