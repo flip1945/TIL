@@ -1,4 +1,4 @@
-# 유레카 이론(Bronze 2)
+# 유레카 이론 (Bronze 2)
 
 ### 문제 설명
 
@@ -58,7 +58,7 @@ Tn = 1 + 2 + 3 + ... + n = n(n+1)/2
 
 ---
 
-[출처](https://www.acmicpc.net/problem/10448)
+출처 : https://www.acmicpc.net/problem/10448
 
 ---
 
@@ -120,6 +120,8 @@ public class Main {
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/27648157
 
 ~~~java
 import java.util.Scanner;
