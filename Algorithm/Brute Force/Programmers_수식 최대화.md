@@ -145,6 +145,8 @@ def split_num(s):
     return answer + [int(string)]
 ~~~
 
+---
+
 #### 다른 사람의 풀이
 
 ~~~python
