@@ -99,6 +99,8 @@ def solution(phone_book):
     return True
 ~~~
 
+---
+
 #### 다른 사람의 풀이
 
 ~~~python
