@@ -1,4 +1,4 @@
-# 메뉴 리뉴얼(Level 2)
+# 메뉴 리뉴얼 (Level 2)
 
 ### 문제 설명
 
@@ -48,7 +48,7 @@
 
 첫 번째 전화번호, “12”가 두 번째 전화번호 “123”의 접두사입니다. 따라서 답은 false입니다. 
 
-[출처](https://programmers.co.kr/learn/courses/30/lessons/42577)
+출처 : https://programmers.co.kr/learn/courses/30/lessons/42577
 
 ---
 
