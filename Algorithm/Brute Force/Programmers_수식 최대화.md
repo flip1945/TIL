@@ -1,4 +1,4 @@
-# 수식 최대화(Level 2)
+# 수식 최대화 (Level 2)
 
 ### 문제 설명
 
@@ -79,7 +79,7 @@ IT 벤처 회사를 운영하고 있는 라이언은 매년 사내 해커톤 대
 = 300   
 따라서, 우승 시 받을 수 있는 상금은 300 입니다.   
 
-[출처](https://programmers.co.kr/learn/courses/30/lessons/67257)
+출처 : https://programmers.co.kr/learn/courses/30/lessons/67257
 
 ---
 
