@@ -123,6 +123,8 @@ def get_music_min(start, end):
     return end_min - start_min
 ~~~
 
+---
+
 #### 다른 사람의 풀이
 
 ~~~python
