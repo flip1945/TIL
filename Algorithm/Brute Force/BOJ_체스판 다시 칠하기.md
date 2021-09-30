@@ -63,7 +63,7 @@ WWWWWWWWWWBWB
 12
 ~~~
 
-[출처](https://www.acmicpc.net/problem/1018)
+출처 : https://www.acmicpc.net/problem/1018
 
 ---
 
@@ -110,6 +110,8 @@ print(answer)
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/18861954
 
 ~~~python
 m,n=map(int,input().split())
