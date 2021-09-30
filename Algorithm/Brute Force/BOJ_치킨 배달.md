@@ -1,4 +1,4 @@
-# 치킨 배달(Gold 5)
+# 치킨 배달 (Gold 5)
 
 ### 문제 설명
 
@@ -115,7 +115,7 @@
 
 ---
 
-[출처](https://www.acmicpc.net/problem/15686)
+출처 : https://www.acmicpc.net/problem/15686
 
 ---
 
@@ -180,6 +180,8 @@ print(min_dist)
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/12593740
 
 ~~~python
 from itertools import combinations
