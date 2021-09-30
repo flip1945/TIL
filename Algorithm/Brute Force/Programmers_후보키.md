@@ -1,4 +1,4 @@
-# 후보키(Level 2)
+# 후보키 (Level 2)
 
 ### 문제 설명
 
@@ -50,7 +50,7 @@
 
 문제에 주어진 릴레이션과 같으며, 후보 키는 2개이다.
 
-[출처](https://programmers.co.kr/learn/courses/30/lessons/42890)
+출처 : https://programmers.co.kr/learn/courses/30/lessons/42890
 
 ---
 
