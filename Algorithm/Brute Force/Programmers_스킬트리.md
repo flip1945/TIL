@@ -1,4 +1,4 @@
-# 스킬트리(Level 2)
+# 스킬트리 (Level 2)
 
 ### 문제 설명
 
@@ -44,7 +44,7 @@
 
 * "BDA": B 스킬을 배우기 전에 C 스킬을 먼저 배워야 합니다. 불가능한 스킬트리입니다.  
 
-[출처](https://programmers.co.kr/learn/courses/30/lessons/49993)
+출처 : https://programmers.co.kr/learn/courses/30/lessons/49993
 
 ---
 
