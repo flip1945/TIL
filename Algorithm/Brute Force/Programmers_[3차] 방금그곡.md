@@ -1,4 +1,4 @@
-# \[3차] 방금그곡(Level 2)
+# \[3차] 방금그곡 (Level 2)
 
 ### 문제 설명
 
@@ -51,7 +51,7 @@
 
 세 번째 예시에서 HELLO는 C#DEFGABC#DEFGAB로, WORLD는 ABCDE로 재생되었다. HELLO 안에 있는 ABC#은 기억한 멜로디인 ABC와 일치하지 않고, WORLD 안에 있는 ABC가 기억한 멜로디와 일치한다.   
 
-[출처](https://programmers.co.kr/learn/courses/30/lessons/17683)
+출처 : https://programmers.co.kr/learn/courses/30/lessons/17683
 
 ---
 
