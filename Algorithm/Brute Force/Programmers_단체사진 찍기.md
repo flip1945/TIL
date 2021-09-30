@@ -1,4 +1,4 @@
-# 단체사진 찍기(Level 2)
+# 단체사진 찍기 (Level 2)
 
 ### 문제 설명
 
@@ -39,7 +39,7 @@
 
 두 번째 예제는 무지가 콘과의 간격이 2보다 작기를 원하고, 반대로 콘은 무지와의 간격이 1보다 크기를 원하는 상황이다. 이는 동시에 만족할 수 없는 조건이므로 경우의 수는 0이다.   
 
-[출처](https://programmers.co.kr/learn/courses/30/lessons/1835)
+출처 : https://programmers.co.kr/learn/courses/30/lessons/1835
 
 ---
 
