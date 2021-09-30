@@ -1,4 +1,4 @@
-# \[1차] 프렌즈4블록(Level 2)
+# \[1차] 프렌즈4블록 (Level 2)
 
 ### 문제 설명
 
@@ -63,7 +63,7 @@ TMMTTJ
 
 * 입출력 예제 2는 본문 설명에 있는 그림을 옮긴 것이다. 11개와 4개의 블록이 차례로 지워지며, 모두 15개의 블록이 지워진다.  
 
-[출처](https://programmers.co.kr/learn/courses/30/lessons/17679)
+출처 : https://programmers.co.kr/learn/courses/30/lessons/17679
 
 ---
 
