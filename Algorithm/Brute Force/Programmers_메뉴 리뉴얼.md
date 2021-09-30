@@ -130,6 +130,8 @@ def solution(orders, course):
     return sorted(answer)
 ~~~
 
+---
+
 #### 다른 사람의 풀이
 
 ~~~python
