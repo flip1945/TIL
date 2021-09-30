@@ -85,6 +85,8 @@ def solution(skill, skill_trees):
     return answer
 ~~~
 
+---
+
 #### 다른 사람의 풀이
 
 ~~~python
