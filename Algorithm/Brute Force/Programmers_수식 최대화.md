@@ -149,6 +149,8 @@ def split_num(s):
 
 #### 다른 사람의 풀이
 
+출처 : https://programmers.co.kr/learn/courses/30/lessons/67257/solution_groups?language=python3
+
 ~~~python
 def solution(expression):
     operations = [('+', '-', '*'),('+', '*', '-'),('-', '+', '*'),('-', '*', '+'),('*', '+', '-'),('*', '-', '+')]
