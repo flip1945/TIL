@@ -134,6 +134,8 @@ def solution(orders, course):
 
 #### 다른 사람의 풀이
 
+출처 : https://programmers.co.kr/learn/courses/30/lessons/72411/solution_groups?language=python3
+
 ~~~python
 import collections
 import itertools
