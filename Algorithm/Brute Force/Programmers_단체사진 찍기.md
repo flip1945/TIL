@@ -146,6 +146,8 @@ class Data {
 
 #### 다른 사람의 풀이
 
+출처 : https://programmers.co.kr/learn/courses/30/lessons/1835/solution_groups?language=java
+
 ~~~java
 import java.util.*;
 class Solution {
