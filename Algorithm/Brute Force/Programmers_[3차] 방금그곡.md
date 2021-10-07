@@ -127,6 +127,8 @@ def get_music_min(start, end):
 
 #### 다른 사람의 풀이
 
+출처 : https://programmers.co.kr/learn/courses/30/lessons/17683/solution_groups?language=python3
+
 ~~~python
 def shap_to_lower(s):
     s = s.replace('C#','c').replace('D#','d').replace('F#','f').replace('G#','g').replace('A#','a')
