@@ -89,6 +89,8 @@ def solution(skill, skill_trees):
 
 #### 다른 사람의 풀이
 
+출처 : https://programmers.co.kr/learn/courses/30/lessons/49993/solution_groups?language=python3
+
 ~~~python
 def solution(skill, skill_trees):
     answer = 0
