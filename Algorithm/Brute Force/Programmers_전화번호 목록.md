@@ -103,6 +103,8 @@ def solution(phone_book):
 
 #### 다른 사람의 풀이
 
+출처 : https://programmers.co.kr/learn/courses/30/lessons/42577/solution_groups?language=python3
+
 ~~~python
 def solution(phone_book):
     answer = True
