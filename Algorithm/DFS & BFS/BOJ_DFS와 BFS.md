@@ -1,4 +1,4 @@
-# DFS와 BFS(Silver 2)
+# DFS와 BFS (Silver 2)
 
 ### 문제
 
@@ -62,7 +62,7 @@
 1000 999
 ~~~
 
-[출처](https://www.acmicpc.net/problem/1260)
+출처 : https://www.acmicpc.net/problem/1260
 
 ---
 
