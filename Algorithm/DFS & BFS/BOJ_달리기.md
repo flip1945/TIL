@@ -1,4 +1,4 @@
-# 달리기(Platinum 2)
+# 달리기 (Platinum 2)
 
 ### 문제
 
@@ -79,7 +79,7 @@
 -1
 ~~~
 
-[출처](https://www.acmicpc.net/problem/16930)
+출처 : https://www.acmicpc.net/problem/16930
 
 ---
 
