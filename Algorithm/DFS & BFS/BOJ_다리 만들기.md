@@ -1,4 +1,4 @@
-# 다리 만들기(Gold 3)
+# 다리 만들기 (Gold 3)
 
 ### 문제
 
@@ -54,7 +54,7 @@
 3
 ~~~
 
-[출처](https://www.acmicpc.net/problem/2146)
+출처 : https://www.acmicpc.net/problem/2146
 
 ---
 
@@ -142,6 +142,8 @@ print(min_bridge)
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/26402825
 
 ~~~python
 from collections import deque
