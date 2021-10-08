@@ -1,4 +1,4 @@
-# 미로 탐색(Silver 1)
+# 미로 탐색 (Silver 1)
 
 ### 문제
 
@@ -84,7 +84,7 @@ N×M크기의 배열로 표현되는 미로가 있다.
 13
 ~~~
 
-[출처](https://www.acmicpc.net/problem/2178)
+출처 : https://www.acmicpc.net/problem/2178
 
 ---
 
