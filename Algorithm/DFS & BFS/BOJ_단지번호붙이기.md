@@ -1,4 +1,4 @@
-# 단지번호붙이기(Silver 1)
+# 단지번호붙이기 (Silver 1)
 
 ### 문제
 
@@ -42,7 +42,7 @@
 9
 ~~~
 
-[출처](https://www.acmicpc.net/problem/2667)
+출처 : https://www.acmicpc.net/problem/2667
 
 ---
 
