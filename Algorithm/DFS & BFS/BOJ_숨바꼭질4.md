@@ -1,4 +1,4 @@
-# 숨바꼭질4(Gold 4)
+# 숨바꼭질4 (Gold 4)
 
 ### 문제
 
@@ -44,7 +44,7 @@
 5 4 8 16 17
 ~~~
 
-[출처](https://www.acmicpc.net/problem/13913)
+출처 : https://www.acmicpc.net/problem/13913
 
 ---
 
