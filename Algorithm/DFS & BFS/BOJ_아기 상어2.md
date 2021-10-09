@@ -1,4 +1,4 @@
-# 아기 상어2(Silver 2)
+# 아기 상어2 (Silver 2)
 
 ### 문제
 
@@ -54,7 +54,7 @@ N×M 크기의 공간에 아기 상어 여러 마리가 있다. 공간은 1×1 �
 2
 ~~~
 
-[출처](https://www.acmicpc.net/problem/17086)
+출처 : https://www.acmicpc.net/problem/17086
 
 ---
 
@@ -128,6 +128,8 @@ print(max(answer))
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/12489529
 
 ~~~python
 from collections import deque
