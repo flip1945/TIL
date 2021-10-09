@@ -1,4 +1,4 @@
-# 단지번호붙이기(Silver 1)
+# 안전 영역 (Silver 1)
 
 ### 문제
 
@@ -86,7 +86,7 @@
 
 아무 지역도 물에 잠기지 않을 수도 있다.
 
-[출처](https://www.acmicpc.net/problem/2468)
+출처 : https://www.acmicpc.net/problem/2468
 
 ---
 
@@ -135,6 +135,8 @@ print(max(answer))
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/16429508
 
 ~~~python
 n=int(input())
