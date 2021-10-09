@@ -1,4 +1,4 @@
-# 숨바꼭질2(Gold 5)
+# 숨바꼭질2 (Gold 5)
 
 ### 문제
 
@@ -33,7 +33,7 @@
 2
 ~~~
 
-[출처](https://www.acmicpc.net/problem/12851)
+출처 : https://www.acmicpc.net/problem/12851
 
 ---
 
