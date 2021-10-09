@@ -1,4 +1,4 @@
-# 아기 상어(Gold 4)
+# 아기 상어 (Gold 4)
 
 ### 문제
 
@@ -137,7 +137,8 @@ N×N 크기의 공간에 물고기 M마리와 아기 상어 1마리가 있다. �
 ~~~
 39
 ~~~
-[출처](https://www.acmicpc.net/problem/16236)
+
+출처 : https://www.acmicpc.net/problem/16236
 
 ---
 
@@ -248,6 +249,8 @@ print(sec)
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/19179639
 
 ~~~python
 from heapq import*
