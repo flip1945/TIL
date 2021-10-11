@@ -1,4 +1,4 @@
-# 알파벳(Gold 5)
+# 알파벳 (Gold 4)
 
 ### 문제
 
@@ -62,7 +62,7 @@ HMCHH
 10
 ~~~
 
-[출처](https://www.acmicpc.net/problem/1987)
+출처 : https://www.acmicpc.net/problem/1987
 
 ---
 
@@ -114,6 +114,8 @@ print(m)
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/22247568
 
 ~~~python
 m = [*open(0)]
