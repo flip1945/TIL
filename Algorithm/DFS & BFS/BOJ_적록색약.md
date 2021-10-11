@@ -1,4 +1,4 @@
-# 적록색약(Gold 5)
+# 적록색약 (Gold 5)
 
 ### 문제
 
@@ -51,7 +51,7 @@ RRRRR
 4 3
 ~~~
 
-[출처](https://www.acmicpc.net/problem/10026)
+출처 : https://www.acmicpc.net/problem/10026
 
 ---
 
@@ -99,6 +99,8 @@ print(*answer)
 ~~~
 
 ---
+
+출처 : https://www.acmicpc.net/source/13903924
 
 #### 다른 사람의 풀이
 
