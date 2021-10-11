@@ -61,7 +61,7 @@ S 900 6
 1200
 ~~~
 
-[출처](https://www.acmicpc.net/problem/16437)
+출처 : https://www.acmicpc.net/problem/16437
 
 ---
 
@@ -125,6 +125,8 @@ print(dfs(1))
 
 #### 다른 사람의 풀이
 
+출처 : https://www.acmicpc.net/source/12845996
+
 ~~~python
 import sys
 sys.setrecursionlimit(10**9)
@@ -134,15 +136,15 @@ S = [0]*N
 W = [0]*N
 tree = [[] for _ in range(N)]
 for i in range(1,N):
-	t,a,p = input().split()
-	if t == 'S': S[i] = int(a)
-	else: W[i] = int(a)
-	tree[int(p)-1].append(i)
+    t,a,p = input().split()
+    if t == 'S': S[i] = int(a)
+    else: W[i] = int(a)
+    tree[int(p)-1].append(i)
 def count(p):
-	ret = S[p]
-	for u in tree[p]:
-		ret += count(u)
-	ret = max(0, ret-W[p])
-	return ret
+    ret = S[p]
+    for u in tree[p]:
+        ret += count(u)
+    ret = max(0, ret-W[p])
+    return ret
 print(count(0))
 ~~~
