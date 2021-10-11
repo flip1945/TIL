@@ -1,4 +1,4 @@
-# 이모티콘(Gold 5)
+# 이모티콘 (Gold 5)
 
 ### 문제
 
@@ -68,7 +68,7 @@
 8
 ~~~
 
-[출처](https://www.acmicpc.net/problem/14226)
+출처 : https://www.acmicpc.net/problem/14226
 
 ---
 
