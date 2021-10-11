@@ -1,4 +1,4 @@
-# 연구소(Gold 5)
+# 연구소 (Gold 5)
 
 ### 문제
 
@@ -117,7 +117,7 @@
 3
 ~~~
 
-[출처](https://www.acmicpc.net/problem/14502)
+출처 : https://www.acmicpc.net/problem/14502
 
 ---
 
@@ -215,6 +215,8 @@ print(max_zero)
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/27334190
 
 ~~~python
 from itertools import product, combinations
