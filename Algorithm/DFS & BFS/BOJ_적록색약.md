@@ -117,27 +117,27 @@ dx =[0,0,1,-1]
 dy = [1,-1,0,0]
 
 def floodfill(mod):
-	global visit
-	visit = [[0 for i in range(n)]for j in range(n)]
-	cnt = 0
-	for i in range(n):
-		for j in range(n):
-			if not visit[i][j]:
-				dfs(i,j,mod)
-				cnt+=1
-	return cnt
+    global visit
+    visit = [[0 for i in range(n)]for j in range(n)]
+    cnt = 0
+    for i in range(n):
+        for j in range(n):
+            if not visit[i][j]:
+                dfs(i,j,mod)
+                cnt+=1
+    return cnt
 
 
 def dfs(row,col,mod):
-	global visit
-	visit[row][col] =1
-	for i in range(4):
-		r = row + dx[i]
-		c = col + dy[i]
-		if r<0 or r>=n or c<0 or c>=n:
-			continue
-		if not visit[r][c]  and ((rgb[g[r][c]]%mod) == (rgb[g[row][col]]%mod)):
-			dfs(r,c,mod)
+    global visit
+    visit[row][col] =1
+    for i in range(4):
+        r = row + dx[i]
+        c = col + dy[i]
+        if r<0 or r>=n or c<0 or c>=n:
+            continue
+        if not visit[r][c]  and ((rgb[g[r][c]]%mod) == (rgb[g[row][col]]%mod)):
+            dfs(r,c,mod)
 
 
 print(floodfill(3), floodfill(2))
