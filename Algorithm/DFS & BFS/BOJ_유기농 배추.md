@@ -27,8 +27,6 @@
 
 각 테스트 케이스에 대해 필요한 최소의 배추흰지렁이 마리 수를 출력한다.
 
-
-
 ---
 
 #### 예제 입력 1
@@ -79,7 +77,7 @@
 2
 ~~~
 
-[출처](https://www.acmicpc.net/problem/1012)
+출처 : https://www.acmicpc.net/problem/1012
 
 ---
 
@@ -131,6 +129,8 @@ for _ in range(int(input())):
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/13475269
 
 ~~~python
 import sys
