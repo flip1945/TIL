@@ -128,6 +128,8 @@ for i in range(int(input())):
     print(''.join(bit))
 ~~~
 
+---
+
 #### 다른 사람의 풀이
 
 ~~~python
