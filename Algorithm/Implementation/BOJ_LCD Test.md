@@ -92,6 +92,8 @@ for i in range(len(lcd)):
     print("".join(lcd[i]))
 ~~~
 
+---
+
 #### 다른 사람의 풀이
 
 ~~~python
