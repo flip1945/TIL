@@ -1,4 +1,4 @@
-# 길 찾기 게임(Level 3)
+# 길 찾기 게임 (Level 3)
 
 ### 문제 설명
 
@@ -68,7 +68,7 @@
 
 문제에 주어진 예시와 같다.   
 
-[출처](https://programmers.co.kr/learn/courses/30/lessons/42892)
+출처 : https://programmers.co.kr/learn/courses/30/lessons/42892
 
 ---
 
@@ -193,70 +193,3 @@ def postorder_dfs(tree, node, result):
 #### 다른 사람의 풀이
 
 출처 : https://minnnne.tistory.com/100
-
-~~~python
-import sys
-sys.setrecursionlimit(10**6)
-
-class Tree:
-    def __init__(self):
-        self.parent = None
-        self.left = None
-        self.right = None
-        self.data = None
-        self.index = None
-
-def preOrder(root, vector):
-    if root == None:
-        return vector
-    
-    vector.append(root.index)
-    preOrder(root.left,vector)
-    preOrder(root.right,vector)
-    
-    return vector
-
-def postOrder(root, vector):
-
-    if root == None:
-        return vector
-    postOrder(root.left, vector)
-    postOrder(root.right, vector)
-    vector.append(root.index)
-
-    return vector
-
-
-def solution(nodeinfo):
-    root = None
-    for i in range(len(nodeinfo)):
-        nodeinfo[i].append(i+1)
-    nodeinfo = sorted(nodeinfo, key= lambda x:x[1], reverse=True)
-    
-    for i,node in enumerate(nodeinfo):
-        newTree = Tree()
-        newTree.index = node[2]
-        newTree.data = node
-        if root == None:
-            root = newTree
-        else:
-            curTree = root
-            while 1:
-                if curTree.data[0] < newTree.data[0]: # 오른쪽
-                    if curTree.right == None:
-                        curTree.right = newTree
-                        newTree.parent = curTree
-                        break
-                    else:
-                        curTree = curTree.right
-                else: #왼쪽
-                    if curTree.left == None:
-                        curTree.left = newTree
-                        newTree.parent = curTree
-                        break
-                    else:
-                        curTree = curTree.left
-    
-    answer = [preOrder(root,[]), postOrder(root,[])]
-    return answer
-~~~
