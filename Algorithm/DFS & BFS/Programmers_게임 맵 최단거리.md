@@ -1,4 +1,4 @@
-# 게임 맵 최단거리(Level 2)
+# 게임 맵 최단거리 (Level 2)
 
 ### 문제 설명
 
@@ -66,7 +66,7 @@ ROR 게임은 두 팀으로 나누어서 진행하며, 상대 팀 진영을 먼�
 
 문제의 예시와 같으며, 상대 팀 진영에 도달할 방법이 없습니다. 따라서 -1을 return 합니다.
 
-[출처](https://programmers.co.kr/learn/courses/30/lessons/1844)
+출처 : https://programmers.co.kr/learn/courses/30/lessons/1844
 
 ---
 
