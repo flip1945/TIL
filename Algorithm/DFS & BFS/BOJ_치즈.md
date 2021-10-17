@@ -1,4 +1,4 @@
-# 치즈(Gold 4)
+# 치즈 (Gold 4)
 
 ### 문제
 
@@ -64,7 +64,7 @@ N×M (5≤N, M≤100)의 모눈종이 위에 아주 얇은 치즈가 <그림 1>�
 4
 ~~~
 
-[출처](https://www.acmicpc.net/problem/2638)
+출처 : https://www.acmicpc.net/problem/2638
 
 ---
 
@@ -234,6 +234,8 @@ print(answer)
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/26059512
 
 ~~~python
 import sys
