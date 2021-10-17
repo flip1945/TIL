@@ -30,7 +30,7 @@ n개의 노드가 있는 그래프가 있습니다. 각 노드는 1부터 n까�
 
 <img src = "https://grepp-programmers.s3.amazonaws.com/files/ybm/fadbae38bb/dec85ab5-0273-47b3-ba73-fc0b5f6be28a.png">
 
-[출처](https://programmers.co.kr/learn/courses/30/lessons/17687)
+출처 : https://programmers.co.kr/learn/courses/30/lessons/17687
 
 ---
 
@@ -99,6 +99,8 @@ def bfs(graph, start, visited, result):
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://programmers.co.kr/learn/courses/30/lessons/17687/solution_groups?language=python3
 
 ~~~pyhton
 def solution(n, edge):
