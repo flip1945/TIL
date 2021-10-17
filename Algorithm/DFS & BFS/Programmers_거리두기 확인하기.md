@@ -129,7 +129,7 @@
 
 두 번째 대기실을 제외한 모든 대기실에서 거리두기가 지켜지고 있으므로, 배열 \[1, 0, 1, 1, 1]을 return 합니다.
 
-[출처](https://programmers.co.kr/learn/courses/30/lessons/17687)
+출처 : https://programmers.co.kr/learn/courses/30/lessons/17687
 
 ---
 
