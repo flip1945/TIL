@@ -97,7 +97,7 @@
 0
 ~~~
 
-[출처](https://www.acmicpc.net/problem/7576)
+출처 : https://www.acmicpc.net/problem/7576
 
 ---
 
@@ -198,6 +198,8 @@ class Node {
 ---
 
 #### 다른 사람의 풀이
+
+출처 : https://www.acmicpc.net/source/26896403
 
 ~~~java
 import java.util.LinkedList;
