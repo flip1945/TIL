@@ -117,6 +117,8 @@ print(ranking)
 
 #### 다른 사람의 풀이
 
+출처 : https://www.acmicpc.net/source/25160490
+
 ~~~python
 import sys
 input = sys.stdin.readline
