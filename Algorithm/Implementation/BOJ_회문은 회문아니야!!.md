@@ -70,4 +70,5 @@ print(len(string) if not is_palindrome(string) else (-1 if is_all_same_char else
 #### 다른 사람의 풀이
 
 가장 간단하 풀이입니다.
+
 https://www.acmicpc.net/source/41192255
