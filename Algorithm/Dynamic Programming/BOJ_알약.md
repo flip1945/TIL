@@ -24,7 +24,7 @@
 
 각 테스트 케이스에 대해서 가능한 문자열의 개수를 출력한다.
 
-출처 : https://www.acmicpc.net/problem/20159
+출처 : https://www.acmicpc.net/problem/4811
 
 ---
 
