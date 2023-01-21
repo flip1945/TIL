@@ -37,48 +37,60 @@
 #### 나의 풀이
 
 ~~~java
-**import java.io.*;
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(bf.readLine());
-        List<List<Integer>> graph = new ArrayList<>();
+    static int[][] map;
+    static int n;
 
-        for (int i = 0; i <= n; i++) {
-            graph.add(new ArrayList<>());
-        }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        n = scanner.nextInt();
+        int r1 = scanner.nextInt();
+        int c1 = scanner.nextInt();
+        int r2 = scanner.nextInt();
+        int c2 = scanner.nextInt();
 
-        for (int i = 0; i < n - 2; i++) {
-            StringTokenizer st = new StringTokenizer(bf.readLine());
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
-
-            graph.get(a).add(b);
-            graph.get(b).add(a);
-        }
-
-        boolean[] visited = new boolean[n + 1];
-
-        visited[1] = true;
-        dfs(graph, visited, 1);
-
-        for (int i = 2; i <= n; i++) {
-            if (!visited[i]) {
-                System.out.print("1 " + i);
-                break;
-            }
-        }
+        map = new int[n][n];
+        System.out.println(bfs(r1, c1, r2, c2));
     }
 
-    static void dfs(List<List<Integer>> graph, boolean[] visited, int currentNode) {
-        for (Integer nextNode : graph.get(currentNode)) {
-            if (!visited[nextNode]) {
-                visited[nextNode] = true;
-                dfs(graph, visited, nextNode);
+    static int bfs(int startRow, int startColumn, int goalRow, int goalColumn) {
+        int[] dx = {-2, -2, 0, 0, 2, 2};
+        int[] dy = {-1, 1, -2, 2, -1, 1};
+
+        List<Point> queue = new LinkedList<>();
+        queue.add(new Point(startRow, startColumn));
+        while (!queue.isEmpty()) {
+            Point currentPoint = queue.remove(0);
+            int x = currentPoint.x;
+            int y = currentPoint.y;
+
+            if (x == goalRow && y == goalColumn) {
+                return map[x][y];
+            }
+
+            for (int i = 0; i < 6; i++) {
+                int nextX = x + dx[i];
+                int nextY = y + dy[i];
+
+                if (nextX >= 0 && nextX < n && nextY >= 0 && nextY < n && map[nextX][nextY] == 0) {
+                    queue.add(new Point(nextX, nextY));
+                    map[nextX][nextY] = map[x][y] + 1;
+                }
             }
         }
+        return -1;
     }
-}**
+}
+
+class Point {
+    int x;
+    int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+}
 ~~~
