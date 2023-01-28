@@ -70,10 +70,6 @@ public class Main {
         System.out.println(getAnswer(greenOnions, end, c));
     }
 
-    private static long getAnswer(List<Integer> greenOnions, int lengthOfGreenOnion, int countOfChicken) {
-        return greenOnions.stream().mapToLong(Integer::longValue).sum() - ((long) lengthOfGreenOnion * countOfChicken);
-    }
-
     private static int getCountOfGreenOnion(List<Integer> greenOnions, int lengthOfGreenOnion) {
         if (lengthOfGreenOnion == 0) {
             return 1000000001;
@@ -84,6 +80,10 @@ public class Main {
             countOfGreenOnion += greenOnion / lengthOfGreenOnion;
         }
         return countOfGreenOnion;
+    }
+
+    private static long getAnswer(List<Integer> greenOnions, int lengthOfGreenOnion, int countOfChicken) {
+        return greenOnions.stream().mapToLong(Integer::longValue).sum() - ((long) lengthOfGreenOnion * countOfChicken);
     }
 }
 ~~~
