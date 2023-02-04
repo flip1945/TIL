@@ -17,6 +17,7 @@
 ---
 
 #### 풀이
+~~~java
 import java.util.*;
 
 public class Main {
