@@ -50,9 +50,9 @@ public class Main {
 
     static int getCurrentSize(int currentSize, char prevState, char state) {
         if (!isZigzagNumbers(prevState, state)) {
-            currentSize = 1;
+            return 2;
         }
-        return ++currentSize;
+        return currentSize + 1;
     }
 
     static boolean isZigzagNumbers(char prevState, char state) {
@@ -99,9 +99,9 @@ class MainTest {
 
     private int getCurrentSize(int currentSize, char prevState, char state) {
         if (!isZigzagNumbers(prevState, state)) {
-            currentSize = 1;
+            return 2;
         }
-        return ++currentSize;
+        return currentSize + 1;
     }
 
     private boolean isZigzagNumbers(char prevState, char state) {
