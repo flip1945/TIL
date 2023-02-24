@@ -47,30 +47,24 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
         int[] dp = new int[41];
         dp[0] = 1;
         dp[1] = 1;
-        dp[2] = 2;
-        for (int i = 3; i < n + 1; i++) {
+        for (int i = 2; i < 41; i++) {
             dp[i] = dp[i - 2] + dp[i - 1];
         }
 
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
         int m = scanner.nextInt();
-        int[] vip = new int[m + 2];
-        vip[0] = 0;
-        for (int i = 1; i < m + 1; i++) {
-            vip[i] = scanner.nextInt();
-        }
-        vip[m+1] = n + 1;
-
         int answer = 1;
         int prevVip = 0;
-        for (int i = 1; i < vip.length; i++) {
-            answer *= dp[vip[i] - prevVip - 1];
-            prevVip = vip[i];
+        for (int i = 0; i < m; i++) {
+            int vip = scanner.nextInt();
+            answer *= dp[vip - prevVip - 1];
+            prevVip = vip;
         }
+        answer *= dp[n - prevVip];
 
         System.out.println(answer);
     }
