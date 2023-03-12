@@ -1,4 +1,4 @@
-# KMP는 왜 KMP일까 (Bronze 2)
+# KMP는 왜 KMP일까? (Bronze 2)
 
 ### 문제 설명
 
