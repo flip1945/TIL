@@ -81,6 +81,8 @@ public class Main {
 }
 ~~~
 
+---
+
 #### 다른 사람의 풀이
 
 https://www.acmicpc.net/source/25954984
