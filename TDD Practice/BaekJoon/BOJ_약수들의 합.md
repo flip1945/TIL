@@ -115,7 +115,7 @@ class MainTest {
 
     @ParameterizedTest
     @MethodSource("provideNotPerfectNumbers")
-    @DisplayName("완전수가 아닌 경우 완벽수가 아니라고 반환해야 한다.")
+    @DisplayName("완전수가 아닌 경우 완전수가 아니라고 반환해야 한다.")
     void checkNotPerfectNumberTest(int number, String expected) {
         String actual = checkPerfectNumber(number);
 
