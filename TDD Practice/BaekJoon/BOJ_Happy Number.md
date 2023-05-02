@@ -36,7 +36,6 @@ public class Main {
     }
 
     static String isHappyNumber(int number) {
-        number = getSumOfSquaresOfEachDigit(number);
         while (isNotUnhappy(number)) {
             if (isHappy(number)) {
                 return "HAPPY";
@@ -118,7 +117,6 @@ class MainTest {
     }
 
     private String isHappyNumber(int number) {
-        number = getSumOfSquaresOfEachDigit(number);
         while (isNotUnhappy(number)) {
             if (isHappy(number)) {
                 return "HAPPY";
