@@ -76,7 +76,7 @@ class MainTest {
     @ParameterizedTest
     @MethodSource("provideStrings")
     @DisplayName("모든 D에 대해 D-유일하면 놀라운 문자열 아니라면 놀랍지 않은 문자열이라고 반환한다.")
-    void isSurprising(String string, String expected) {
+    void isSurprisingTest(String string, String expected) {
         SurprisingStringChecker sut = new SurprisingStringChecker();
 
         String actual = sut.isSurprising(string);
