@@ -66,10 +66,10 @@ class TeamNameScore implements Comparable<TeamNameScore> {
 
     public TeamNameScore(String teamName, String playerName) {
         this.teamName = teamName;
-        this.countOfL = getCount(playerName, 'L') + getCount(teamName, 'L');
-        this.countOfO = getCount(playerName, 'O') + getCount(teamName, 'O');
-        this.countOfV = getCount(playerName, 'V') + getCount(teamName, 'V');
-        this.countOfE = getCount(playerName, 'E') + getCount(teamName, 'E');
+        this.countOfL = getCount(teamName + playerName, 'L');
+        this.countOfO = getCount(teamName + playerName, 'O');
+        this.countOfV = getCount(teamName + playerName, 'V');
+        this.countOfE = getCount(teamName + playerName, 'E');
     }
 
     public String getTeamName() {
@@ -167,10 +167,10 @@ class TeamNameScore implements Comparable<TeamNameScore> {
 
     public TeamNameScore(String teamName, String playerName) {
         this.teamName = teamName;
-        this.countOfL = getCount(playerName, 'L') + getCount(teamName, 'L');
-        this.countOfO = getCount(playerName, 'O') + getCount(teamName, 'O');
-        this.countOfV = getCount(playerName, 'V') + getCount(teamName, 'V');
-        this.countOfE = getCount(playerName, 'E') + getCount(teamName, 'E');
+        this.countOfL = getCount(teamName + playerName, 'L');
+        this.countOfO = getCount(teamName + playerName, 'O');
+        this.countOfV = getCount(teamName + playerName, 'V');
+        this.countOfE = getCount(teamName + playerName, 'E');
     }
 
     public String getTeamName() {
