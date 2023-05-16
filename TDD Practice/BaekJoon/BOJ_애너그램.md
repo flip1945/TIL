@@ -13,6 +13,7 @@
 #### 풀이
 ~~~java
 import java.util.*;
+import java.util.stream.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,35 +33,13 @@ enum AnagramChecker {
     INSTANCE;
 
     public boolean check(String first, String second) {
-        if (first.length() != second.length()) {
-            return false;
-        }
-
-        Map<Character, Integer> firstLetterCounter = getLetterCounter(first);
-        Map<Character, Integer> secondLetterCounter = getLetterCounter(second);
-
-        for (char ch = 'a'; ch <= 'z'; ch++) {
-            if (!firstLetterCounter.get(ch).equals(secondLetterCounter.get(ch))) {
-                return false;
-            }
-        }
-        return true;
+        return sortedString(first).equals(sortedString(second));
     }
 
-    private Map<Character, Integer> getLetterCounter(String word) {
-        Map<Character, Integer> letterCounter = initLetterCounter();
-        for (char ch : word.toCharArray()) {
-            letterCounter.put(ch, letterCounter.get(ch) + 1);
-        }
-        return letterCounter;
-    }
-
-    private Map<Character, Integer> initLetterCounter() {
-        Map<Character, Integer> letterCounter = new HashMap<>();
-        for (char ch = 'a'; ch <= 'z'; ch++) {
-            letterCounter.put(ch, 0);
-        }
-        return letterCounter;
+    private String sortedString(String word) {
+        return Arrays.stream(word.split(""))
+                .sorted()
+                .collect(Collectors.joining());
     }
 }
 ~~~
@@ -74,8 +53,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -109,35 +88,13 @@ enum AnagramChecker {
     INSTANCE;
 
     public boolean check(String first, String second) {
-        if (first.length() != second.length()) {
-            return false;
-        }
-
-        Map<Character, Integer> firstLetterCounter = getLetterCounter(first);
-        Map<Character, Integer> secondLetterCounter = getLetterCounter(second);
-
-        for (char ch = 'a'; ch <= 'z'; ch++) {
-            if (!firstLetterCounter.get(ch).equals(secondLetterCounter.get(ch))) {
-                return false;
-            }
-        }
-        return true;
+        return sortedString(first).equals(sortedString(second));
     }
 
-    private Map<Character, Integer> getLetterCounter(String word) {
-        Map<Character, Integer> letterCounter = initLetterCounter();
-        for (char ch : word.toCharArray()) {
-            letterCounter.put(ch, letterCounter.get(ch) + 1);
-        }
-        return letterCounter;
-    }
-
-    private Map<Character, Integer> initLetterCounter() {
-        Map<Character, Integer> letterCounter = new HashMap<>();
-        for (char ch = 'a'; ch <= 'z'; ch++) {
-            letterCounter.put(ch, 0);
-        }
-        return letterCounter;
+    private String sortedString(String word) {
+        return Arrays.stream(word.split(""))
+                .sorted()
+                .collect(Collectors.joining());
     }
 }
 ~~~
