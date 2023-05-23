@@ -38,7 +38,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int n = Integer.parseInt(scanner.nextLine());
         List<String> testResult = IntStream.range(0, n)
-                .mapToObj(i -> scanner.nextLine())
+            .mapToObj(i -> scanner.nextLine())
             .collect(Collectors.toList());
         AsiaOlympiadInInformatics olympiad = new AsiaOlympiadInInformatics();
         olympiad.getMedalists(testResult).forEach(System.out::println);
