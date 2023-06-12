@@ -74,8 +74,8 @@ class MainTest {
 
     @ParameterizedTest
     @MethodSource("provideNumbers")
-    @DisplayName("숫자 리스트 안에서 자신의 2배인 수가 있는 수의 개수를 반한한다.")
-    void doublesTest(long number1, long number2, long expected) {
+    @DisplayName("두 수의 최소공배수를 반환한다.")
+    void lcmCalculateTest(long number1, long number2, long expected) {
         LcmCalculator sut = new LcmCalculator(new GcdCalculator());
 
         long actual = sut.calculate(number1, number2);
