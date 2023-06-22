@@ -28,8 +28,8 @@ class Scores {
 
     public static final String SCORE_DELIMITER = " ";
     public static final String KEEP_IN_NEGOTIATION = "KIN";
-    public static final int VALID_FROM_INDEX = 1;
-    public static final int VALID_TO_INDEX = 4;
+    public static final int VALID_LOWEST_SCORE_INDEX = 1;
+    public static final int VALID_HIGHEST_SCORE_INDEX = 4;
     public static final int KEEP_IN_NEGOTIATION_THRESHOLD = 4;
     private final List<Integer> scores;
 
@@ -53,11 +53,11 @@ class Scores {
     }
 
     private int getDiffBetweenValidHighestScoreAndValidLowestScore() {
-        return Math.abs(scores.get(VALID_FROM_INDEX) - scores.get(VALID_TO_INDEX));
+        return scores.get(VALID_HIGHEST_SCORE_INDEX) - scores.get(VALID_LOWEST_SCORE_INDEX);
     }
 
     private int calculateTotalScore() {
-        return scores.subList(VALID_FROM_INDEX, VALID_TO_INDEX).stream()
+        return scores.subList(VALID_LOWEST_SCORE_INDEX, VALID_HIGHEST_SCORE_INDEX).stream()
                 .mapToInt(Integer::intValue)
                 .sum();
     }
@@ -111,8 +111,8 @@ class Scores {
 
     public static final String SCORE_DELIMITER = " ";
     public static final String KEEP_IN_NEGOTIATION = "KIN";
-    public static final int VALID_FROM_INDEX = 1;
-    public static final int VALID_TO_INDEX = 4;
+    public static final int VALID_LOWEST_SCORE_INDEX = 1;
+    public static final int VALID_HIGHEST_SCORE_INDEX = 4;
     public static final int KEEP_IN_NEGOTIATION_THRESHOLD = 4;
     private final List<Integer> scores;
 
@@ -136,11 +136,11 @@ class Scores {
     }
 
     private int getDiffBetweenValidHighestScoreAndValidLowestScore() {
-        return Math.abs(scores.get(VALID_FROM_INDEX) - scores.get(VALID_TO_INDEX));
+        return scores.get(VALID_HIGHEST_SCORE_INDEX) - scores.get(VALID_LOWEST_SCORE_INDEX);
     }
 
     private int calculateTotalScore() {
-        return scores.subList(VALID_FROM_INDEX, VALID_TO_INDEX).stream()
+        return scores.subList(VALID_LOWEST_SCORE_INDEX, VALID_HIGHEST_SCORE_INDEX).stream()
                 .mapToInt(Integer::intValue)
                 .sum();
     }
