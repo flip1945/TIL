@@ -120,7 +120,7 @@ class MainTest {
     @ParameterizedTest
     @MethodSource("provideCards")
     @DisplayName("할리갈리 카드들을 확인해서 종을 쳐야 하면 YES를 아니라면 NO를 반환한다.")
-    void getEasiestQuizTest(List<String> cards, String expected) {
+    void halliGalliTest(List<String> cards, String expected) {
         HalliGalli sut = new HalliGalli(cards);
 
         String actual = sut.ring();
