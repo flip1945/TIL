@@ -53,10 +53,10 @@ class Pangram {
         if (alphabets.size() == PANGRAM_SIZE) {
             return PANGRAM_WORD;
         }
-        return MISSING_SUFFIX + String.join(DELIMITER, getMissing(alphabets));
+        return MISSING_SUFFIX + String.join(DELIMITER, getMissing());
     }
 
-    private List<String> getMissing(Set<Alphabet> alphabets) {
+    private List<String> getMissing() {
         return IntStream.range(START_INDEX, END_INDEX)
                 .mapToObj(Alphabet::new)
                 .filter(alphabet -> !alphabets.contains(alphabet))
@@ -186,10 +186,10 @@ class Pangram {
         if (alphabets.size() == PANGRAM_SIZE) {
             return PANGRAM_WORD;
         }
-        return MISSING_SUFFIX + String.join(DELIMITER, getMissing(alphabets));
+        return MISSING_SUFFIX + String.join(DELIMITER, getMissing());
     }
 
-    private List<String> getMissing(Set<Alphabet> alphabets) {
+    private List<String> getMissing() {
         return IntStream.range(START_INDEX, END_INDEX)
                 .mapToObj(Alphabet::new)
                 .filter(alphabet -> !alphabets.contains(alphabet))
