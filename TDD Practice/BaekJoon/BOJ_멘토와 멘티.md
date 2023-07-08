@@ -64,6 +64,10 @@ class MentorMenteePairs {
 
 class MentorMenteePair implements Comparable<MentorMenteePair> {
 
+    public static final String DELIMITER = " ";
+    public static final int MENTOR_INDEX = 0;
+    public static final int MENTEE_INDEX = 1;
+
     private final String mentor;
     private final String mentee;
 
@@ -73,8 +77,8 @@ class MentorMenteePair implements Comparable<MentorMenteePair> {
     }
 
     public static MentorMenteePair from(String mentorAndMentee) {
-        String[] split = mentorAndMentee.split(" ");
-        return new MentorMenteePair(split[0], split[1]);
+        String[] split = mentorAndMentee.split(DELIMITER);
+        return new MentorMenteePair(split[MENTOR_INDEX], split[MENTEE_INDEX]);
     }
 
     @Override
@@ -161,6 +165,10 @@ class MentorMenteePairs {
 
 class MentorMenteePair implements Comparable<MentorMenteePair> {
 
+    public static final String DELIMITER = " ";
+    public static final int MENTOR_INDEX = 0;
+    public static final int MENTEE_INDEX = 1;
+    
     private final String mentor;
     private final String mentee;
 
@@ -170,8 +178,8 @@ class MentorMenteePair implements Comparable<MentorMenteePair> {
     }
 
     public static MentorMenteePair from(String mentorAndMentee) {
-        String[] split = mentorAndMentee.split(" ");
-        return new MentorMenteePair(split[0], split[1]);
+        String[] split = mentorAndMentee.split(DELIMITER);
+        return new MentorMenteePair(split[MENTOR_INDEX], split[MENTEE_INDEX]);
     }
 
     @Override
