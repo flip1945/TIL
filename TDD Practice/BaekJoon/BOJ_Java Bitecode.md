@@ -12,7 +12,7 @@
 $N$인 코드 
 $S$가 주어지면, 그 코드의 **JAVA Bitecode**를 구해보자!
 
-출처 : https://www.acmicpc.net/problem/11170
+출처 : https://www.acmicpc.net/problem/21867
 
 ---
 
