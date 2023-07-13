@@ -21,7 +21,7 @@ $D2$로 했다.
 여러분들도 (이름만) 
 $D2$급 문제를 풀어보자!
 
-출처 : https://www.acmicpc.net/problem/11170
+출처 : https://www.acmicpc.net/problem/23303
 
 ---
 
