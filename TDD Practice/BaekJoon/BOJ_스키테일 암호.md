@@ -16,7 +16,7 @@
 
 암호화하는 문자열을 리본의 가장 왼쪽 끝 부분을 포함하는 가로 한 줄만 사용하여 쓰고, 남은 공간은 아무 문자로나 채운다.
 
-<img src='https://upload.acmicpc.net/b6ade534-0048-480f-95aa-d7ce528f2c1d/-/preview/' width='400px'
+<img src='https://upload.acmicpc.net/b6ade534-0048-480f-95aa-d7ce528f2c1d/-/preview/' width='400px'>
 
 마지막으로 막대에서 리본을 풀면 암호화가 완료된다.
 
