@@ -108,7 +108,7 @@ class MainTest {
     @ParameterizedTest
     @MethodSource("provideVoteResults")
     @DisplayName("투표의 당선된 사람의 이름을 반환한다.")
-    void schoolSongTest(List<String> voteResults, String expected) {
+    void voteTest(List<String> voteResults, String expected) {
         VoteCounter sut = new VoteCounter(voteResults);
 
         String actual = sut.whoIsElected();
