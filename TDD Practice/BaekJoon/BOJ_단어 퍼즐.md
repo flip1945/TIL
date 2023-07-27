@@ -46,7 +46,7 @@ public class Main {
 class Anagram {
 
     public static final String TRUE_STRING = "same";
-    public static final String DIFFERENT_STRING = "different";
+    public static final String FALSE_STRING = "different";
 
     private final String originWord;
     private final String anotherWord;
@@ -57,7 +57,7 @@ class Anagram {
     }
 
     public String isAnagram() {
-        return getSortedString(originWord).equals(getSortedString(anotherWord)) ? TRUE_STRING : DIFFERENT_STRING;
+        return getSortedString(originWord).equals(getSortedString(anotherWord)) ? TRUE_STRING : FALSE_STRING;
     }
 
     private String getSortedString(String originWord) {
@@ -111,7 +111,7 @@ class MainTest {
 class Anagram {
 
     public static final String TRUE_STRING = "same";
-    public static final String DIFFERENT_STRING = "different";
+    public static final String FALSE_STRING = "different";
 
     private final String originWord;
     private final String anotherWord;
@@ -122,7 +122,7 @@ class Anagram {
     }
 
     public String isAnagram() {
-        return getSortedString(originWord).equals(getSortedString(anotherWord)) ? TRUE_STRING : DIFFERENT_STRING;
+        return getSortedString(originWord).equals(getSortedString(anotherWord)) ? TRUE_STRING : FALSE_STRING;
     }
 
     private String getSortedString(String originWord) {
