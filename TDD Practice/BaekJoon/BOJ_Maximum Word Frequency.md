@@ -78,9 +78,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class MainTest {
 
     @ParameterizedTest
-    @MethodSource("provideProgramInfos")
-    @DisplayName("병렬화가 좋으면 parallelize, 하지 않는 게 좋다면 do not parallelize, 상관 없다면 does not matter를 반환한다.")
-    void testProgramSelect(List<String> words, String expected) {
+    @MethodSource("provideWords")
+    @DisplayName("주어진 단어 중 가장 많이 나타난 단어와 횟수를 반환한다.")
+    void testGetMaxFrequentWordAndCount(List<String> words, String expected) {
         WordCounter sut = new WordCounter(words);
 
         String actual = sut.getMaxFrequentWordAndCount();
@@ -88,7 +88,7 @@ class MainTest {
         assertEquals(expected, actual);
     }
 
-    private static Stream<Arguments> provideProgramInfos() {
+    private static Stream<Arguments> provideWords() {
         return Stream.of(
                 Arguments.of(List.of("a"), "a 1"),
                 Arguments.of(List.of("b"), "b 1"),
