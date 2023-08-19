@@ -37,10 +37,10 @@ public class Main {
 
 class UnitConverter {
 
-    public static final String DELIMITER = " ";
+    private static final String DELIMITER = " ";
 
-    public static final int VALUE_INDEX = 0;
-    public static final int UNIT_INDEX = 1;
+    private static final int VALUE_INDEX = 0;
+    private static final int UNIT_INDEX = 1;
 
     public String convert(String unit) {
         double value = Double.parseDouble(unit.split(DELIMITER)[VALUE_INDEX]);
@@ -128,10 +128,10 @@ class MainTest {
 
 class UnitConverter {
 
-    public static final String DELIMITER = " ";
+    private static final String DELIMITER = " ";
 
-    public static final int VALUE_INDEX = 0;
-    public static final int UNIT_INDEX = 1;
+    private static final int VALUE_INDEX = 0;
+    private static final int UNIT_INDEX = 1;
 
     public String convert(String unit) {
         double value = Double.parseDouble(unit.split(DELIMITER)[VALUE_INDEX]);
