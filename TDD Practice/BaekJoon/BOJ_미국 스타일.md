@@ -15,7 +15,7 @@
 |부피|	1.0000 리터|	0.2642 갤런|
 | 	|3.7854 리터|	1.0000 갤런|
 
-출처 : https://www.acmicpc.net/problem/11966
+출처 : https://www.acmicpc.net/problem/2712
 
 ---
 
