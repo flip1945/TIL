@@ -38,7 +38,6 @@ public class Main {
 class UnitConverter {
 
     private static final String DELIMITER = " ";
-
     private static final int VALUE_INDEX = 0;
     private static final int UNIT_INDEX = 1;
 
@@ -129,7 +128,6 @@ class MainTest {
 class UnitConverter {
 
     private static final String DELIMITER = " ";
-
     private static final int VALUE_INDEX = 0;
     private static final int UNIT_INDEX = 1;
 
