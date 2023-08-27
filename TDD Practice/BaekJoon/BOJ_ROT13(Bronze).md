@@ -94,7 +94,7 @@ class MainTest {
 
     @ParameterizedTest
     @MethodSource("provideSentence")
-    @DisplayName("학점이 주어지면 평점을 반환한다.")
+    @DisplayName("주어진 문장을 암호화 해야 한다.")
     void shouldEncryptToRot13Password(String sentence, String expected) {
         Encryptor sut = new Encryptor(new Rot13Encrypt());
 
