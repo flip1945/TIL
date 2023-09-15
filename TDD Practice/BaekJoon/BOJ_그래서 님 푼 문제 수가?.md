@@ -6,7 +6,7 @@
 
 브실이를 도와 상대방이 푼 문제 수의 최솟값과 최댓값을 구해보자.
 
-출처 : https://www.acmicpc.net/problem/17350
+출처 : https://www.acmicpc.net/problem/29720
 
 ---
 
