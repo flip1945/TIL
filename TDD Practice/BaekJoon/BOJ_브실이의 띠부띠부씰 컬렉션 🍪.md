@@ -34,7 +34,8 @@ public class Main {
 
 class Stickers {
 
-    public static final String GOLD_CHIP_STICKER = "BRONZESILVER";
+    private static final String GOLD_CHIP_STICKER = "BRONZESILVER";
+
     private final String stickers;
 
     public Stickers(String stickers) {
@@ -115,7 +116,8 @@ class MainTest {
 
 class Stickers {
 
-    public static final String GOLD_CHIP_STICKER = "BRONZESILVER";
+    private static final String GOLD_CHIP_STICKER = "BRONZESILVER";
+
     private final String stickers;
 
     public Stickers(String stickers) {
