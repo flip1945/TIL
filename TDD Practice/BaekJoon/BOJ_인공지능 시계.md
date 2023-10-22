@@ -72,6 +72,43 @@ class AiClock {
         return totalSecondsOfDay / SECONDS_OF_HOUR;
     }
 }
+
+// 추가 풀이
+import java.time.LocalTime;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int hour = scanner.nextInt();
+        int minute = scanner.nextInt();
+        int second = scanner.nextInt();
+        int cookingTime = scanner.nextInt();
+
+        AiClock aiClock = AiClock.from(hour, minute, second);
+        System.out.println(aiClock.getEndTime(cookingTime));
+    }
+}
+
+class AiClock {
+
+    private static final String DELIMITER = " ";
+
+    private final LocalTime startTime;
+
+    public AiClock(LocalTime startTime) {
+        this.startTime = startTime;
+    }
+
+    public static AiClock from(int hour, int minute, int second) {
+        return new AiClock(LocalTime.of(hour, minute, second));
+    }
+
+    public String getEndTime(int cookingTimeOfOven) {
+        LocalTime endTime = startTime.plusSeconds(cookingTimeOfOven);
+        return endTime.getHour() + DELIMITER + endTime.getMinute() + DELIMITER + endTime.getSecond();
+    }
+}
 ~~~
 
 ---
