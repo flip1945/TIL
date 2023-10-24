@@ -1,4 +1,4 @@
-# Identify, Sort, Index, Solve (Bronze 5)
+# Identify, Sort, Index, Solve (Silver 5)
 
 ### 문제 설명
 
