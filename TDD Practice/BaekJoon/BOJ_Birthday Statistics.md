@@ -35,7 +35,7 @@ class BirthdayStatistics {
 
     private static final int MONTH = 12;
     private static final int MONTH_OFFSET = 1;
-    public static final String DELIMITER = "\n";
+    private static final String DELIMITER = "\n";
 
     private final List<String> employees;
 
