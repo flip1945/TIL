@@ -6,15 +6,19 @@ The herd has run its first marathon!  The N (1 <= N <= 5,000) times have been po
 
 Consider a simple example with times from a smaller herd of just 3 cows (note that cows do not run 26.2 miles so very quickly):
 
->11:20:20
->11:15:12
->14:20:14
+```
+11:20:20
+11:15:12
+14:20:14
+```
 
 The proper sorting result is:
 
->11:15:12
->11:20:20
->14:20:14
+```
+11:15:12
+11:20:20
+14:20:14
+```
 
 출처 : https://www.acmicpc.net/problem/5939
 
