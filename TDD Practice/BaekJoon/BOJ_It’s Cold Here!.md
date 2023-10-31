@@ -4,7 +4,7 @@
 
 Canada is cold in winter, but some parts are colder than others. Your task is very simple, you need to find the coldest city in Canada. So, when given a list of cities and their temperatures, you are to determine which city in the list has the lowest temperature and is thus the coldest.
 
-출처 : https://www.acmicpc.net/problem/11170
+출처 : https://www.acmicpc.net/problem/6830
 
 ---
 
