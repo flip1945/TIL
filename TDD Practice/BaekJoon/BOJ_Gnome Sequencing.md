@@ -83,9 +83,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class MainTest {
 
     @ParameterizedTest
-    @MethodSource("provideString")
-    @DisplayName("문자 압축기는 문자열을 압축한다.")
-    void stringCompressorCompressTheString(List<Integer> gnomes, String expected) {
+    @MethodSource("provideGnomes")
+    @DisplayName("유전자 순서는 유전자의 순서를 확인한다.")
+    void gnomeSequencingCheckGnomeOrder(List<Integer> gnomes, String expected) {
         GnomeSequencing sut = new GnomeSequencing(gnomes);
 
         String actual = sut.isOrdered();
@@ -93,7 +93,7 @@ class MainTest {
         assertEquals(expected, actual);
     }
 
-    static Stream<Arguments> provideString() {
+    static Stream<Arguments> provideGnomes() {
         return Stream.of(
                 Arguments.of(List.of(1, 2, 3), "Ordered"),
                 Arguments.of(List.of(1, 3, 2), "Unordered"),
