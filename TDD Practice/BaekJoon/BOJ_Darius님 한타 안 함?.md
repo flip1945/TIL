@@ -9,7 +9,7 @@
 
 $K+A < D$이거나, $D = 0$이면 그는 「가짜」이고, 그렇지 않으면 「진짜」이다.
 
-출처 : https://www.acmicpc.net/problem/11170
+출처 : https://www.acmicpc.net/problem/20499
 
 ---
 
