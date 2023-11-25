@@ -6,7 +6,7 @@ Stuart has $n$ rectangular frames, which are numbered from $1$ to $n$. Frame $i$
 
 The size of a frame is the area that it covers. Stuart wants you to help him find the area covered by the largest size frame that he has.
 
-출처 : https://www.acmicpc.net/problem/11170
+출처 : https://www.acmicpc.net/problem/28490
 
 ---
 
