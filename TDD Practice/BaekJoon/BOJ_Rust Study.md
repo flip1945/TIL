@@ -1,4 +1,4 @@
-# Rust Study (Bronze 5)
+# Rust Study (Bronze 4)
 
 ### 문제 설명
 
